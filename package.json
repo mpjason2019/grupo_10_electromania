@@ -1,0 +1,23 @@
+{
+  "name": "grupo_10_electromania",
+  "version": "1.0.0",
+  "description": "Proyecto-Electromania",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpjason2019/grupo_10_electromania.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpjason2019/grupo_10_electromania/issues"
+  },
+  "homepage": "https://github.com/mpjason2019/grupo_10_electromania#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
