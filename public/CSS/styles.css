@@ -152,7 +152,7 @@ div.hamburger-buttom i{
 
 .divnavbar{
    
-    margin-top: 125px;
+    margin-top: 85px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -507,7 +507,7 @@ header div.header-hiding{
 
 
         .divnavbar{
-            margin-top: 192px;
+            margin-top: 85px;
         }
         header div.logo, header.form{
             margin-left: 43px;
@@ -544,12 +544,24 @@ header div.header-hiding{
         justify-content: flex-end;
 }
 
+    div.social a{
+        margin: 8px; 
+    }
+
+    div.social{
+        justify-content:flex-end;
+        margin-left: 175px;
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
     .sesiona{
         
         
         text-decoration: none;
         font-size: 15px;
-        color: #ffff;
+        font-weight: bolder;
+        color:#001772 ;
         margin: 0px 5px;
         justify-content: center;
         align-content: center;
@@ -564,7 +576,7 @@ header div.header-hiding{
     }
 
     .divnavbar{
-        margin-top: 220px;
+        margin-top: 150px;
     }
 
     header .form{
@@ -578,7 +590,12 @@ header div.header-hiding{
 
               }
     h2.nombre{
-        top: 40px;
+        top: 60px;
+        
+    }
+
+    div.hiding p{
+        font-size: 12px;
     }
 
 
@@ -652,15 +669,19 @@ header div.header-hiding{
     h2.nombre{
          font-size: 30px;
 }
-
+    div.social a{
+       margin: 8px; 
+    }
 
     div.social{
-        justify-content:space-around;
-        margin-left: 400px;
+        justify-content:flex-end;
+        margin-left: 250px;
+        font-size: 30px;
+        margin-right: 15px;
     }
 
     div.hiding p{
-        font-size: 15px;
+        font-size: 16px;
     }
 
     header div.logo, header.form{
