@@ -28,7 +28,7 @@ h2.nombre{
     position: absolute;
     top: 10px;
     left: 10px;
-    color: #ffffff;
+    color: #001772;
 }
 
 
@@ -37,7 +37,7 @@ header.main-header{
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #06268dc7;
+    background-color: #87ceeb;
     position: fixed;  
     top: 0;
     left: 0;
@@ -49,7 +49,7 @@ header.main-header{
 div.top-header{
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+
     width: 100%;
 }
 header div.top-header p{
@@ -75,10 +75,13 @@ header .form{
 header .form {
     display: flex;
     align-items: center;
-   
-    font-size: 12px;
+   font-size: 12px;
+   margin-right: 5PX;
+   margin-bottom: 29px;
+   margin-top: 45px;
+   margin-left: 70px;
     
-    flex-wrap: wrap;
+    
    
 }
 
@@ -102,12 +105,14 @@ p.buscar{
 }
 
 div.buscar{
-    margin: 0 auto;
+    margin-left: 5px;
 }
 
 
 div.hamburger-buttom{
     text-align: center;
+    margin-top: 45px;
+    margin-right: 8px;
 }
 
 div.hamburger-buttom i{
@@ -123,6 +128,7 @@ div.hamburger-buttom i{
 
 .sesion{
     margin-top: 15px;
+    margin-right: 10px;
     padding: 0 ;
     display: none;
 }
@@ -130,7 +136,7 @@ div.hamburger-buttom i{
 
 
 .logo{
-    width: 50px;
+    width: 40px;
     margin: 0;
     animation: aumentar 1000ms linear 1 alternate;
     display: flex;
@@ -361,6 +367,86 @@ header div.header-hiding{
     }
 
 
+    /*aqui comienza el FOOTER*/
+
+    footer{
+        background-color: #87ceeb;
+        padding: 30px 0;
+    }
+    
+    .footer-logo{
+         max-width: 40%;
+         margin: auto;
+         display: block;
+    }
+    
+    .footer-company-description{
+        margin: auto;
+        text-align: center;
+        padding: 0 30px;
+    }
+    
+    .group-social-icons{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+        
+    .circle-social-icons{
+        background-color: blue;
+        color: white;
+        margin: auto;
+        margin-left: 10px;
+        max-width: 50px;
+        padding: 10px 10px;
+        border-radius: 50%;
+        display: inline;
+    
+    }
+    
+    .footer-titles{
+        font-size: 1.2em;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .reccomended-list{
+        text-align: center;
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .newsletter-input{
+        margin: auto;
+        max-width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+        border-color: lightgray;
+        display: block;
+    }
+    
+    .newsletter-button-send{
+        background-color: blue;
+        padding: 10px;
+        color: white;
+        margin: auto;
+        display: block;
+        margin-top: 10px;
+        border-radius: 10px;
+    
+    }
+    
+    .copyright{
+        color: gray;
+        font-size: 0.8em;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+
+    
+
 @media (min-width: 361px){
 
     
@@ -393,11 +479,9 @@ header div.header-hiding{
 
    
     header .form {
-        display: flex;
-        /* align-items: center; */
-        padding: 2px;
-        font-size: 11px;
-        margin: 0  auto;
+        margin-left: auto;
+        margin-right: auto;
+       
     }
 
 
@@ -416,8 +500,8 @@ header div.header-hiding{
         display:block ;
      }
      div.hamburger-buttom i{
-         margin-top: 77%;
-        font-size: 29px;
+        margin-left: 43px;
+        margin-right: 33px;
      
         }
 
@@ -425,7 +509,10 @@ header div.header-hiding{
         .divnavbar{
             margin-top: 192px;
         }
-
+        header div.logo, header.form{
+            margin-left: 43px;
+            margin-top: 35px;
+        }
 
 }
 
@@ -494,6 +581,57 @@ header div.header-hiding{
         top: 40px;
     }
 
+
+    /*aqui comienza el FOOTER*/
+
+    .company-description-footer{
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-around;
+        padding: 0px 20px;
+    }
+
+    .footer-logo{
+        max-width: 25%;
+        margin-left: 20px ;
+   }
+
+   .footer-company-description{
+       max-width: 30%;
+       text-align: right;
+       margin-right: 20px;
+       padding: 0 0px;
+   }
+
+   .group-social-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+}
+
+    .recommended-list-general{
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    .reccomended{
+        width: 40%;
+    }
+
+    .newsletter-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-titles{
+        padding-right: 20px;
+    }
+
+    
+
+
 }
 
 @media (min-width: 1000px){
@@ -523,6 +661,44 @@ header div.header-hiding{
 
     div.hiding p{
         font-size: 15px;
+    }
+
+    header div.logo, header.form{
+       
+        margin-top: 45px;
+        margin-left: 65px;
+    }
+
+
+
+/* aqui comienza el FOOTER*/
+
+    .company-description-footer{
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+    .group-social-icons{
+        max-width: 1200px;
+        display: flex;
+        /* justify-content: flex-start; */
+        margin: auto;
+        padding-top: 20px;
+
+    }
+
+    .footer-logo{
+        max-width: 25%;
+        margin-left: 20px ;
+    }
+
+    .copyright{
+    max-width: 1200px;
+    display: block;
+    margin: auto;
     }
 
 
