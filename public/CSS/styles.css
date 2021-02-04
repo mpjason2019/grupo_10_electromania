@@ -526,9 +526,17 @@ p.login-page{
     flex-direction: row;
     justify-content:space-around;
     
-    
+      
    
 }
+
+   .ctatrs2:hover  {
+           box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    }
+
+   div.registro:hover  h3{
+       color: #000000;
+   }
 
     .login-page1{
         background-color: #ffffff;
@@ -545,6 +553,7 @@ p.login-page{
         margin: 2px;
         font-weight: 600;
         text-decoration: none;
+        border-radius: 15px;
     }
 .cuentatrs a{
     color: #001772;
