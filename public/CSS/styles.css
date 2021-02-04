@@ -6,6 +6,7 @@
 
 html, body{
     height: 100vh;
+    background-color: #ECEAEB ;
 }
 
 body{
@@ -111,7 +112,14 @@ div.buscar{
 input.boton{
     border-radius: 15px;
     padding: 5px;
+    font-size: 70%;
 }
+
+div.buscar input.boton :hover{
+    background-color: green;
+    color: hotpink;
+}
+
 
 div.hamburger-buttom{
     text-align: center;
@@ -145,12 +153,14 @@ div.hamburger-buttom i{
     animation: aumentar 1000ms linear 1 alternate;
     display: flex;
     display: none;
+   }
    
-} 
+ 
+
 @keyframes aumentar{
-    0% {transform: rotate(0deg);
+    0% {transform: scale(1);
     }
-    100% {transform: rotate(180deg);
+    100% {transform: scale(1.1);
     }
 }
 
@@ -376,7 +386,7 @@ header div.header-hiding{
 
     footer{
         background-color: #87ceeb;
-        padding: 30px 0;
+        padding: 15px 0;
     }
     
     .footer-logo{
@@ -388,13 +398,14 @@ header div.header-hiding{
     .footer-company-description{
         margin: auto;
         text-align: center;
-        padding: 0 30px;
+        padding: 10px 30px;
     }
     
     .group-social-icons{
         display: flex;
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
     
         
@@ -414,19 +425,22 @@ header div.header-hiding{
         font-size: 1.2em;
         text-align: center;
         font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     
     .reccomended-list{
         text-align: center;
         list-style-type: none;
         padding-left: 0;
+        font-size: 0.8rem;
     }
     
     .newsletter-input{
-        margin: auto;
+        margin: 5px auto;
         max-width: 90%;
         border-radius: 10px;
-        padding: 10px;
+        padding: 5px;
         border-color: lightgray;
         display: block;
     }
@@ -449,6 +463,142 @@ header div.header-hiding{
         text-align: center;
     }
 
+    div.logoFooter{
+        text-align: center;
+        margin: 0 auto;
+    }
+ 
+ 
+    div.logoFooter img{
+      width: 50px;  
+     margin: 0 auto;
+ }
+
+ /* aqui comienza Login Page*/
+
+
+ body.login-page{
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+h1.login-page{
+    font-size: 24px;
+    text-align: left;
+    font-weight:bold;
+    margin: 11px;
+    color: #808080;
+}
+h3.login-page{
+    font-size: 24px;
+    text-align: center;
+    color: #808080;
+}
+h4.login-page{
+    font-weight:bold;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    margin: 15px;
+}
+p.login-page{
+    font-size:1rem;
+    vertical-align: middle;
+}
+.titulo{
+    color: black;
+    background-color: white;
+    
+    margin: auto auto;
+}
+.Password{
+    color: darkgrey;
+    background-color: lightgrey;
+    border: 2px solid darkgrey;
+    padding: 5px;
+    margin: 15px;
+}
+
+.ctatrs{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+
+   
+}
+
+    .ctatrs2{
+        display:flex;
+        flex-direction: row;
+        justify-content:space-around;
+        font-size: 13px;
+        background-color: #87ceeb;
+        padding: 13px;
+        width: 45%;
+        margin: 2px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+.cuentatrs a{
+    color: #001772;
+    display: inline-block;    
+    text-align: center;
+    text-decoration: none;
+  
+    
+}
+.separador{
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 15px;
+
+    border-style: border-box;
+}
+.registro{
+    color: darkgrey;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 0.7rem;
+}
+.rgtr{
+    color: darkgrey;
+    background-color: white;
+    text-decoration: none;
+}
+.insert{
+    width: 100%;
+    margin: 5px;
+    background-color: lightgrey ;
+    border: 1px solid lightgrey;
+    align-content: center;
+    font-weight: 400;
+}
+
+
+header div.logo-login{
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+div.top-header-login{
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #87ceeb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+    .nombre-login{
+        margin: 10px;
+        color: #001772;
+    }
 
     
 
@@ -518,6 +668,14 @@ header div.header-hiding{
             margin-left: 43px;
             margin-top: 35px;
         }
+
+        .titulo{
+            color: black;
+            background-color: white;
+            
+            margin: auto 80px;
+        }
+
 
 }
 
@@ -623,18 +781,26 @@ header div.header-hiding{
        text-align: right;
        margin-right: 20px;
        padding: 0 0px;
+
+   }
+
+   .footer-company-description p{
+    text-align: justify;
    }
 
    .group-social-icons{
     display: flex;
     justify-content: flex-end;
     padding: 0 40px;
+    margin-top: 20px;
 }
+    
 
     .recommended-list-general{
         display: flex;
         align-items: start;
         justify-content: space-around;
+        margin-bottom: 10px;
     }
 
     .reccomended{
@@ -650,9 +816,10 @@ header div.header-hiding{
     .footer-titles{
         padding-right: 20px;
     }
-
+    .ctatrs2{
+        font-size: 15px;
+    }
     
-
 
 }
 
@@ -693,6 +860,11 @@ header div.header-hiding{
        
         margin-top: 45px;
         margin-left: 65px;
+
+    }
+        .ctatrs2{
+            font-size: 18px;
+        }
     }
 
 
@@ -704,15 +876,15 @@ header div.header-hiding{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: auto;
+        margin: 15px auto ;
     }
 
     .group-social-icons{
         max-width: 1200px;
         display: flex;
         /* justify-content: flex-start; */
-        margin: auto;
-        padding-top: 20px;
+        margin: 15px auto;
+        
 
     }
 
@@ -728,7 +900,9 @@ header div.header-hiding{
     }
 
 
-}
+
+
+
 @media (min-width: 1300px){
 
     div.social{

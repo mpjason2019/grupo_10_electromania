@@ -11,8 +11,8 @@ app.get('/', (req, res) =>{
     res.sendFile( path.resolve ('./views/home.html'));
 
 });
-app.get('/ofertas', (req, res) =>{
-    res.sendFile( path.resolve ('./views/ofertas.html'));
+app.get('/login', (req, res) =>{
+    res.sendFile( path.resolve ('./views/Login.html'));
 
 });
 app.get('/tiendas_oficiales', (req, res) =>{

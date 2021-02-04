@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="utf-8" class="aAX">
     <head>
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/Loginstyles.css">
-        <meta name="viewport" contect="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromania</title>
+    <link  rel="icon" type="image/png" href="/images/logo-social.png"  />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d80f5cb230.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
     </head>
-    <main>
-        <section>
-            <div class="Iniciar_Sesión">
-                <h1>Iniciar Sesión</h1>
-                <br>
-            </div>
-        </section>
-        <section >
-            <div class="ctatrs">
-                <div class="cuentatrs">
-                    <br>
-                    <a class="cuentatrs" href="#"><p>Iniciar sesión con Facebook</p></a>
-                    <br>
+   <body class="login-page">
+        <header>
+            <div class="top-header-login">
+                <h2 class="nombre-login">Electromania</h2>
+                <div class="logo-login">
+                    <a href="/"><img src="/images/logo.png" class="logo"></a>
                 </div>
-                <div class="cuentatrs">
-                    <br>
-                    <a class="cuentatrs" href="#"><p>Iniciar sesión Google</p></a>
-                    <br>
-                </div>
-            </div>
-        </section>
-        <br>
-        <div class="separador">
+           </div> 
+
+
+        </header>
+
+        <main>
             <section>
-                <h3>O con tu email</h3>
+                <div class="Iniciar_Sesión">
+                    <h1 class="login-page">Iniciar Sesión</h1>
+                    <br>
+                </div>
             </section>
-        </div>
-        <form action="/registro" method="post" >
-        <div Class="logueo">
-            <div class="titulo">
-                <h4>Email</h4>
-                <div class="Password">
-                    <input class="insert" name="email" type="email" placeholder="ingresa tu email" > 
+            <section >
+                <div class="ctatrs">
+                    <div class="ctatrs2">
+                        <div class="cuentatrs">                        
+                            <a  href="#">Iniciar sesión con Facebook</a>                       
+                        </div>
+                    </div>
+                    <div class="ctatrs2">
+                        <div class="cuentatrs">                      
+                            <a  href="#">Iniciar sesión Google</a>                        
+                        </div>
+                    </div>    
                 </div>
-            </div>
-            <div class="titulo">
-                <h4>Contraseña</h4>
-                <div class="Password">
-                    <input class="insert" name="Pwd" type="Password" placeholder="ingresa tu password" > 
-                </div>
-            </div>
-        </div>
-        </form>        
-        <div class="separador">
+            </section>
+            <br>
+            <div class="separador">
                 <section>
-                    <h3>O</h3>
+                    <h3 class="login-page">O con tu email</h3>
                 </section>
-        </div>
-        <div>
-            <div>
-                <h3>Creá tu cuenta</h3>
-                <div class="registro">
-                    <a class="rgtr" href="#"><h3>Registrate con tu email</h3></a>
+            </div>
+            <form action="/registro" method="post" >
+            <div Class="logueo">
+                <div class="titulo">
+                    <h4 class="login-page">Email</h4>
+                    <div class="Password">
+                        <input class="insert" name="email" type="email" placeholder="ingresa tu email" > 
+                    </div>
+                </div>
+                <div class="titulo">
+                    <h4 class="login-page">Contraseña</h4>
+                    <div class="Password">
+                        <input class="insert" name="Pwd" type="Password" placeholder="ingresa tu password" > 
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-    </footer>
+            </form>        
+            <!-- <div class="separador">
+                    <section>
+                        <h3 class="login-page">O</h3>
+                    </section>
+            </div> -->
+            <div>
+                <div>
+                    <h3 class="login-page">O creá tu cuenta</h3>
+                    <div class="registro">
+                        <a class="rgtr" href="/"><h3>Registrate con tu email</h3></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+       
+    </body>
 </html>
