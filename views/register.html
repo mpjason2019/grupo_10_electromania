@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+          <div class="register">
+            <h2>Registrate</h2>
+            <h4>¿Ya tenés cuenta?<a href="#">Ingresá aqui</a></h4>
+            <br>
+            <form action="register.html" method="POST">
+              <h3>Nombre</h3>
+              <input class="nombre" type="text" name="nombre" required>
+              <h3>Apellido</h3>
+              <input class="apellido" type="text" name="apellido" required>
+              <h3>Email</h3>
+              <input class="correo" type="email" name="correo" required>
+              <h3>Contraseña</h3>
+              <input class="pass" type="password" name="Contraseña" required>
+              <h3>Repetir contraseña</h3>
+              <input class="repass" type="password" name="Confirma contraseña" required>
+              <div>
+              <input type="submit" class="submit" value="Crear cuenta">
+              </div>
+              <hr> o
+              <hr>
+              <br>
+              <div class="login-items">
+                  <div><a class="link" href="#">Inicia sesion con Facebook</a></div>
+                  <div><a class="link" href="#">Inicia sesion con Google</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>   
+</body>
+</html>
