@@ -1039,6 +1039,7 @@ div.pantalla h4,
         width: 88%;
         margin: 0 auto;
         margin-bottom: 20px;
+        margin-top: 20px;
 
     }
 
@@ -1078,6 +1079,9 @@ margin-top: 17px;
     div.payment a{
         text-decoration: none;
         color: rgb(0, 106, 253);
+    }
+    section.Producto{
+        display: block;
     }
 
 }
