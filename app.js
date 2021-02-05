@@ -32,8 +32,8 @@ app.get('/ayuda', (req, res) =>{
     res.sendFile( path.resolve ('./views/ayuda.html'));
 });
 
-app.get('/crea_tu_cuenta', (req, res) =>{
-    res.sendFile( path.resolve ('./views/crea_tu_cuenta.html'));
+app.get('/register', (req, res) =>{
+    res.sendFile( path.resolve ('./views/register.html'));
 });
 
 app.get('/ingresa', (req, res) =>{
@@ -44,9 +44,6 @@ app.get('/mis_compras', (req, res) =>{
     res.sendFile( path.resolve ('./views/mis_compras.html'));
 });
 
-app.get('/producto', (req, res) =>{
-    res.sendFile( path.resolve ('./views/product.html'));
-});
 
 app.get('/cart', (req, res) =>{
     res.sendFile( path.resolve ('./views/cart.html'));

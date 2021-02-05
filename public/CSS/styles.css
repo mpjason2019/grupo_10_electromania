@@ -30,6 +30,7 @@ h2.nombre{
     top: 10px;
     left: 10px;
     color: #001772;
+    font-weight: initial;
 }
 
 
@@ -387,6 +388,8 @@ header div.header-hiding{
     }
 
 
+    
+
     /*aqui comienza el FOOTER*/
 
     footer{
@@ -470,12 +473,12 @@ header div.header-hiding{
 
     div.logoFooter{
         text-align: center;
-        margin: 0 auto;
+        margin: auto 48px;
     }
  
  
     div.logoFooter img{
-      width: 50px;  
+      
      margin: 0 auto;
  }
 
@@ -929,6 +932,13 @@ div.pantalla h4,
         
     }
 
+        div.car{
+            font-size: 20px ;
+            margin-right: 5px;
+            color: #001772;
+            font-weight: lighter;
+        }
+
     .sesion{
         align-items: center;
     }
@@ -1114,7 +1124,10 @@ margin-top: 17px;
         .ctatrs2{
             font-size: 18px;
         }
-    
+        div.car{
+            font-size: 25px ;
+          
+        }
 
 
 
