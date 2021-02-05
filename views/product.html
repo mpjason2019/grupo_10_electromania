@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="utf-8" class="aAX">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electromania</title>
     <link  rel="icon" type="image/png" href="/images/logo-social.png"  />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d80f5cb230.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/CSS/normalize.css">
-    <link rel="stylesheet" href="/CSS/productstyles.css">
     <link rel="stylesheet" href="/CSS/styles.css">
+    </head>
 </head>
-<body>
+<body class="producto">
     <header class="main-header">
         <div class="header-hiding">
             <div class="hiding">
@@ -31,7 +31,7 @@
         <div class="top-header">
             <h2 class="nombre">Electromania</h2>
             <div class="logo">
-                <img src="/images/logo.png" class="logo">
+                <a href="/"><img src="/images/logo.png" class="logo"></a>
                 
             </div>
             
@@ -72,27 +72,34 @@
             </div>
             <div class="main-article-description">
                 <div class="description">
-                    <br>
                     <p class="descripcion1">Televisor Samsung 32"</p>
                     <p class="descripcion1">$26.499</p>
                     <p class="descripcion4">$29.999</p>
                     <p class="descripcion2">12 OFF</p>
-                    <h4 class="descripcion3">Ahora 12</h4>
+                   
                 </div>
                 <div class="payment">
-                    <br>
-                    <h2>¿Aprovecha las oportunidades</h2>
-                    <br>
-                    <h3><i class="fab fa-cc-visa"></i>12 cuotas sin interes de $$$$</h3>
-                    <h3><i class="fab fa-cc-mastercard"></i>12 cuotas sin interes de $$$$</h3>
-                    <h3><i class="fab fa-cc-amex"></i>12 cuotas sin interes de $$$$</h3>
-                    <h3>Ver cuotas y otros medios de pago</h3>
+                    <div><h2 class="producto">¿Aprovecha las oportunidades</h2>
+                    </div>
+                    <div class="ofertas-pro">
+                        <div class="ofertas-tc">
+                            <div class="fab"><i class="fab fa-cc-visa"></i></div><h3>12 cuotas sin interes de $$$$</h3>
+                        </div>
+                        
+                        <div class="ofertas-tc">
+                            <div class="fab"><i class="fab fa-cc-mastercard"></i></div><h3>12 cuotas sin interes de $$$$</h3>
+                            </div>
+                        <div class="ofertas-tc">
+                            <div class="fab"><i class="fab fa-cc-amex"></i></div><h3>12 cuotas sin interes de $$$$</h3>
+                        </div>
+                    </div>    
+                        <a href="#"><h3>Ver cuotas y otros medios de pago</h3></a>
+                    
                 </div>
                 <div class="paymentbtn">
-                    <form action="#" method="POST">
-                        <br>
-                        <button class="btnComprar" type="submit">Comprar</button>
-                    </form>
+                    <div class="paybt">
+                       <a href="#">comprar</a>
+                    </div>    
                 </div>
             </div>
         </section>
@@ -168,33 +175,35 @@
         <section class="main-producto-spects">
             <div class="main-article-spects">
                 <br>
-                <h3>PANTALLA</h3>
-                <br>
-                <h4>Tipo de Pantalla : LED</h4>
-                <h4>Pulgadas : 32"</h4>
-                <h4>Resolución de Video : HD</h4>
-                <h4>Relación de Aspecto : 16:9</h4>
-                <h4>Norma de Video : NTSC, PAL, PAL-M, PAL-N</h4>
-                <h4>Tipo de TV : Smart TV</h4>
-                <h4>Formato de Pantalla : Plana</h4>
-                <h4>Resolución  : 1366x768 </h4>
-                <h4>Frecuencia de Refresco : 60 Hz</h4>
-                <br>
-                <h3>DIMENSIONES</h3>
-                <br>
-                <h4>Medidas VESA : 200x200</h4>
-                <h4>Ancho : 74.54 cm</h4>
-                <h4>Alto (con Base) : 74.54 cm</h4>
-                <h4>Profundidad (con base): 15.05 cm</h4>
-                <h4>Alto : 44.22 cm</h4>
-                <h4>Profundidad : 6.9 cm</h4>
-                <h4>Ancho (con base) : 46.31 cm</h4>
-                <h4>Peso : 3.8 kg</h4>
+                <h3 class="pantalla">PANTALLA</h3>
+                <div class="pantalla">
+                    <h4>Tipo de Pantalla : LED</h4>
+                    <h4>Pulgadas : 32"</h4>
+                    <h4>Resolución de Video : HD</h4>
+                    <h4>Relación de Aspecto : 16:9</h4>
+                    <h4>Norma de Video : NTSC, PAL, PAL-M, PAL-N</h4>
+                    <h4>Tipo de TV : Smart TV</h4>
+                    <h4>Formato de Pantalla : Plana</h4>
+                    <h4>Resolución  : 1366x768 </h4>
+                    <h4>Frecuencia de Refresco : 60 Hz</h4>
+                </div>
+                <hr>
+                <h3 class="dimensiones">DIMENSIONES</h3>
+                <div class="dimensiones">
+                    <h4>Medidas VESA : 200x200</h4>
+                    <h4>Ancho : 74.54 cm</h4>
+                    <h4>Alto (con Base) : 74.54 cm</h4>
+                    <h4>Profundidad (con base): 15.05 cm</h4>
+                    <h4>Alto : 44.22 cm</h4>
+                    <h4>Profundidad : 6.9 cm</h4>
+                    <h4>Ancho (con base) : 46.31 cm</h4>
+                    <h4>Peso : 3.8 kg</h4>
+                </div>
             </div>
         </section>    
-        <div class="divbaner">
+        <!-- <div class="divbaner">
             <img class="baner" src="/images/img-home-banner.jpg" alt="">
-        </div>
+        </div> -->
     </main>
     <hr>    
     <footer>

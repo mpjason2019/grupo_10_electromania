@@ -13,8 +13,14 @@ app.get('/', (req, res) =>{
 });
 app.get('/login', (req, res) =>{
     res.sendFile( path.resolve ('./views/Login.html'));
-
+    
 });
+
+app.get('/producto', (req, res) =>{
+    res.sendFile( path.resolve ('./views/product.html'));
+});
+
+
 app.get('/tiendas_oficiales', (req, res) =>{
     res.sendFile( path.resolve ('./views/tiendas_oficiales.html'));
 
@@ -37,9 +43,7 @@ app.get('/ingresa', (req, res) =>{
 app.get('/mis_compras', (req, res) =>{
     res.sendFile( path.resolve ('./views/mis_compras.html'));
 });
-app.get('/producto', (req, res) =>{
-    res.sendFile( path.resolve ('./views/product.html'));
-});
+
 app.listen (3030, () => {
     console.log('Servidor corriendo en el puerto 3030');
 });

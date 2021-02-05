@@ -381,6 +381,11 @@ header div.header-hiding{
         margin-left: 117px;
     }
 
+     article a{
+        text-decoration: none;
+        color: #000000;
+    }
+
 
     /*aqui comienza el FOOTER*/
 
@@ -612,6 +617,174 @@ div.top-header-login{
         color: #001772;
     }
 
+
+    /* aqui conmienza el detalle del producto*/
+
+body.producto{
+    width: 100%;
+}
+
+div.main-article-images{
+    margin:0 auto;
+    padding: 5PX;
+}
+
+section.Producto{
+    display: none;
+}
+
+section.main-producto{
+    margin-top: 15px;
+}
+
+h2.producto{
+    font-weight: 500;
+}
+
+div.ofertas-pro{
+    margin: 15px;
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: center;
+}
+
+div.ofertas-pro h3{
+    margin: 12px;
+}
+
+
+
+/* .main-producto{
+    display: flex;
+    flex-direction: row;    
+    background-color: #ECEAEB ;
+    justify-content:stretch;
+    margin-top: 15px;
+    flex-wrap: wrap;
+} */
+
+.main-article{
+    height:100%;
+    width:100%;
+    
+    flex-basis:auto;
+    align-items:auto;
+    justify-content:stretch;
+}
+.main-article-images img{
+    width: 100%;
+    border-radius: 15px ;
+    padding: 10px;
+  
+    
+}
+.main-article-description{
+    order:1;
+    flex-grow: 1;
+    flex-shrink: 3;
+    flex-basis:auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+}
+.main-producto-spects{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    justify-content: stretch;
+    margin: 10px;
+}
+.main-article-spects{
+    text-align: center;
+    order: 0;
+    flex-grow: 1;
+    flex-shrink: 3;
+    height: 100%;
+    width: 100%;
+    
+    flex-basis: auto;
+    align-items: auto;
+    justify-content: stretch;
+}
+.description{
+    order: 0;
+    flex-basis:auto;
+    height:30%;
+ }
+.descripcion4{
+    text-decoration: black line-through;    
+    font-size: 15px;
+    margin: 5px auto;
+    text-align: center;
+    font-weight:bolder;
+}
+.payment h3{
+    font-weight: 500;
+}
+
+div.fab{
+    color: #0000ff;
+    font-size: 40px;
+}
+.payment{
+  
+    border-color: 1px black;
+    flex-shrink: 3;
+    flex-basis:auto;
+    height:60%;
+    text-align: center;
+}
+
+div.ofertas-tc{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.paymentbtn{
+    text-align: center;
+    padding: 15px;
+    background-color: #ECEAEB;
+
+}
+
+div.paybt{
+    background-color: #0000ff;
+    padding: 10px;
+    border-radius:5px; 
+    
+}
+
+
+div.pantalla,
+ .dimensiones{
+    text-align: initial;
+    margin: 20px;
+    font-size: 15px;
+}
+
+div.pantalla h4,
+ .dimensiones h4{
+     font-weight: 500;
+     padding:6px;
+     
+ }
+
+.paymentbtn a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.btnComprar{
+    border-radius: 10px 10px 10px 10px ;
+    width: 100%;
+}
+
     
 
 @media (min-width: 361px){
@@ -646,6 +819,16 @@ div.top-header-login{
 
    
     header .form {
+
+
+
+
+
+
+
+
+
+
         margin-left: auto;
         margin-right: auto;
        
@@ -831,7 +1014,61 @@ div.top-header-login{
     .ctatrs2{
         font-size: 15px;
     }
+
+
+    /*aqui comienza el descripcion del producto*/
+
+    section.main-producto{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    section.main-producto-spects{
+        width: 88%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+    }
+
+    div.main-article-spects h3{
+        font-size: 2rem;
+    }
+
+    div.pantalla,
+    .dimensiones{
+        font-size: 1.5rem;
+    }
+    h3.dimensiones, 
+    h3.pantalla{
+        margin: 10px;
+        text-align: center;
+    }
+    section div.main-article{
+        width: 50%;
+
+    }
+
+    .description{
+margin-top: 17px;
+    }
     
+    .description p{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .description h4{
+        font-size: 24px;
+        text-align: left;
+        animation: none;
+    }
+
+    div.payment a{
+        text-decoration: none;
+        color: rgb(0, 106, 253);
+    }
 
 }
 
