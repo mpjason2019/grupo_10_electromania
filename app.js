@@ -37,9 +37,15 @@ app.get('/ingresa', (req, res) =>{
 app.get('/mis_compras', (req, res) =>{
     res.sendFile( path.resolve ('./views/mis_compras.html'));
 });
+
 app.get('/producto', (req, res) =>{
     res.sendFile( path.resolve ('./views/product.html'));
 });
+
+app.get('/cart', (req, res) =>{
+    res.sendFile( path.resolve ('./views/cart.html'));
+});
+
 app.listen (3030, () => {
     console.log('Servidor corriendo en el puerto 3030');
 });

@@ -1,0 +1,417 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    }
+
+hr{
+    color: gray;
+    margin: 30px;
+}
+
+main{
+    margin: auto;
+    max-width: 1200px;
+}
+
+footer{
+    background-color: skyblue;
+    padding: 30px 0;
+    margin-top: 30px ;
+}
+
+.footer-logo{
+     max-width: 40%;
+     margin: auto;
+     display: block;
+}
+
+.footer-company-description{
+    margin: auto;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.group-social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-icons{
+    /* margin-top: 40px; */
+}
+
+.circle-social-icons{
+    background-color: blue;
+    color: white;
+    margin: auto;
+    margin-left: 10px;
+    max-width: 50px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    display: inline;
+
+}
+
+.footer-titles{
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.reccomended-list{
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.newsletter-input{
+    margin: auto;
+    max-width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: lightgray;
+    display: block;
+}
+
+.newsletter-button-send{
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.copyright{
+    color: gray;
+    font-size: 0.8em;
+    padding: 0 30px;
+    text-align: center;
+}
+
+
+.cart-title{
+    text-align: center;
+}
+
+.login-request{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding-bottom: 5px;
+    border-width: 1px;
+}
+
+.login-buy{
+    text-align: center;
+}
+
+.login-buy-button{
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+
+}
+
+.product-summary{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding-bottom: 5px;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.product-summary2{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding-bottom: 5px;
+    border-width: 1px;
+    padding: 10px;
+}
+
+
+.cart-item-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-cart{
+    max-width: 30%;
+    margin: 2px;
+}
+
+.model{
+    color: blue;
+    font: 15px;
+}
+
+.buy-titles{
+    font-weight: bold;
+}
+
+.buy-details{
+    font-size: 0.8em;
+}
+
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-final-payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guarantee-choose{
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.payment-titles{
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: ;
+}
+
+.margins{
+    margin-top: 10px;
+}
+
+.buy-coupon{
+    color: lightgray;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.important{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-final-payment-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.secure-icon{
+    text-align: center;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    max-width: 20px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.secure-info{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2px;
+
+}
+
+.secure-details{
+    font-size: 0.8em;
+    color: grey;
+    text-align: center;
+    margin-top: 2px;
+
+}
+
+.buy-button{
+    background-color: blue;
+    width: 100%;
+    padding: 6px 0px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.purchase-advantages{
+    display: block;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 15px 0;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.secure-purchase{
+    margin: 0 15px;
+    box-sizing: border-box;
+    
+}
+
+
+@media(min-width:769px){
+
+    .purchase-advantages{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .product-summary2{
+        padding: 30px 40px;
+    }
+    
+
+    .login-buy{
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    .login-buy-button{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .buy-button-tablet-desktop{
+        background-color: blue;
+        padding: 5px 0;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        margin: 15px 0;
+        border-radius: 10px;
+    }
+
+    .buy-coupon{
+        margin: 20px 0px 35px 10px;
+    }
+
+    .buy-button{
+        display: none;
+    }
+
+    .secure-purchase{
+        display: block;
+        margin: 0 30px;
+    }
+
+    .product-summary{
+        max-width: 49%;
+    }
+    .product-summary2{
+        max-width: 49%;
+    }
+    
+
+    .main-product-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .login-request{
+        max-width: 100%;
+    
+    .company-description-footer{
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-around;
+        padding: 0px 20px;
+    }
+
+    .footer-logo{
+        max-width: 25%;
+        margin-left: 20px ;
+   }
+
+   .footer-company-description{
+       max-width: 30%;
+       text-align: right;
+       margin-right: 20px;
+       padding: 0 0px;
+   }
+    
+   .group-social-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+}
+
+    .recommended-list-general{
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    .reccomended{
+        width: 40%;
+    }
+
+    .newsletter-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-titles{
+        padding-right: 20px;
+    }
+
+    .newsletter-button-send{
+
+    }
+}
+
+@media(min-width:1200px){
+
+    .company-description-footer{
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+    .group-social-icons{
+        max-width: 1200px;
+        display: flex;
+        /* justify-content: flex-start; */
+        margin: auto;
+        padding-top: 20px;
+        
+    }
+
+    .footer-logo{
+        max-width: 25%;
+        margin-left: 20px ;
+   }
+
+   .copyright{
+       max-width: 1200px;
+       display: block;
+       margin: auto;
+   }
+
+
+}
