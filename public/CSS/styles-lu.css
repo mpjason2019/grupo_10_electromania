@@ -19,7 +19,7 @@ footer{
 }
 
 .footer-logo{
-     max-width: 40%;
+    
      margin: auto;
      display: block;
 }
@@ -36,9 +36,7 @@ footer{
     margin-top: 30px;
 }
 
-.social-icons{
-    /* margin-top: 40px; */
-}
+
 
 .circle-social-icons{
     background-color: blue;
@@ -188,7 +186,7 @@ footer{
     margin-left: 10px;
     font-size: 1.1em;
     font-weight: bold;
-    color: ;
+    
 }
 
 .margins{
@@ -332,7 +330,7 @@ footer{
 
     .login-request{
         max-width: 100%;
-    
+    }
     .company-description-footer{
         display: flex;
         /* align-items: center; */
@@ -341,14 +339,14 @@ footer{
     }
 
     .footer-logo{
-        max-width: 25%;
+        
         margin-left: 20px ;
    }
 
    .footer-company-description{
        max-width: 30%;
-       text-align: right;
-       margin-right: 20px;
+       text-align:justify;
+       margin-right: 0px;
        padding: 0 0px;
    }
     
@@ -378,9 +376,7 @@ footer{
         padding-right: 20px;
     }
 
-    .newsletter-button-send{
-
-    }
+   
 }
 
 @media(min-width:1200px){
@@ -403,7 +399,7 @@ footer{
     }
 
     .footer-logo{
-        max-width: 25%;
+       margin-top: 15px;
         margin-left: 20px ;
    }
 

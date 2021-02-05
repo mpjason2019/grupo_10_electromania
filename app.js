@@ -8,7 +8,7 @@ app.use(express.static('./public'));
 
 
 app.get('/', (req, res) =>{
-    res.sendFile( path.resolve ('./views/home.html'));
+    res.sendFile( path.resolve ('./views/index.html'));
 
 });
 app.get('/login', (req, res) =>{
@@ -17,36 +17,16 @@ app.get('/login', (req, res) =>{
 });
 
 app.get('/producto', (req, res) =>{
-    res.sendFile( path.resolve ('./views/product.html'));
-});
-
-
-app.get('/tiendas_oficiales', (req, res) =>{
-    res.sendFile( path.resolve ('./views/tiendas_oficiales.html'));
-
-});app.get('/vender', (req, res) =>{
-    res.sendFile( path.resolve ('./views/vender.html'));
-});
-
-app.get('/ayuda', (req, res) =>{
-    res.sendFile( path.resolve ('./views/ayuda.html'));
+    res.sendFile( path.resolve ('./views/productDetail.html'));
 });
 
 app.get('/register', (req, res) =>{
     res.sendFile( path.resolve ('./views/register.html'));
 });
 
-app.get('/ingresa', (req, res) =>{
-    res.sendFile( path.resolve ('./views/ingresa.html'));
-});
-
-app.get('/mis_compras', (req, res) =>{
-    res.sendFile( path.resolve ('./views/mis_compras.html'));
-});
-
 
 app.get('/cart', (req, res) =>{
-    res.sendFile( path.resolve ('./views/cart.html'));
+    res.sendFile( path.resolve ('./views/productCart.html'));
 });
 
 app.listen (3030, () => {
