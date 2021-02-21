@@ -1,33 +1,16 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-
-// const publicpath = path.resolve('public');
+const rutaProductos=require('./routes/productos.js');
+const rutaMain=require('./routes/main.js');
+const rutaUsuarios= require('./routes/usuarios.js')
+app.set('view engine', 'ejs');
 app.use(express.static('./public'));
-// app.use(express.static('./views'));
 
+app.use('/',rutaMain);
+app.use('/productos',rutaProductos);
+app.use('/usuarios',rutaUsuarios);
 
-app.get('/', (req, res) =>{
-    res.sendFile( path.resolve ('./views/index.html'));
-
-});
-app.get('/login', (req, res) =>{
-    res.sendFile( path.resolve ('./views/Login.html'));
-    
-});
-
-app.get('/producto', (req, res) =>{
-    res.sendFile( path.resolve ('./views/productDetail.html'));
-});
-
-app.get('/register', (req, res) =>{
-    res.sendFile( path.resolve ('./views/register.html'));
-});
-
-
-app.get('/cart', (req, res) =>{
-    res.sendFile( path.resolve ('./views/productCart.html'));
-});
 
 app.listen (3030, () => {
     console.log('Servidor corriendo en el puerto 3030');
