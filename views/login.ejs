@@ -39,7 +39,7 @@
                     </div>
                     <div class="ctatrs2">
                         <div class="cuentatrs">                      
-                            <a  href="#">Iniciar sesión Google</a>                        
+                            <a  href="#">Iniciar sesión con Google</a>                        
                         </div>
                     </div>    
                 </div>
@@ -51,20 +51,25 @@
                 </section>
             </div>
             <form action="/usuarios/login" method="post" >
-            <div Class="logueo">
-                <div class="titulo">
-                    <h4 class="login-page">Email</h4>
-                    <div class="Password">
-                        <input class="insert" name="email" type="email" placeholder="ingresa tu email" > 
+            <div>
+                <div Class="logueo">
+                    <div class="titulo">
+                        <h4 class="login-page">Email</h4>
+                        <div class="Password">
+                            <input class="insert" name="email" type="email" placeholder="ingresa tu email" > 
                     </div>
                 </div>
-                <div class="titulo">
-                    <h4 class="login-page">Contraseña</h4>
-                    <div class="Password">
-                        <input class="insert" name="Pwd" type="Password" placeholder="ingresa tu password" > 
+                    <div class="titulo">
+                        <h4 class="login-page">Contraseña</h4>
+                        <div class="Password">
+                            <input class="insert" name="Pwd" type="Password" placeholder="ingresa tu password" > 
+                        </div>
                     </div>
-                </div>
+                    <div class="boton-login">
+                        <input class="boton-login" type="submit" class="submit" value="Iniciar">
+                    </div>
             </div>
+            <br>
             </form>        
             <!-- <div class="separador">
                     <section>
@@ -75,10 +80,11 @@
                 <div class="login-page1">
                     <h3 class="login-page">O creá tu cuenta</h3>
                     <div class="registro">
-                        <a class="rgtr" href="/register"><h3>Registrate con tu email</h3></a>
+                        <a class="rgtr" href="/usuarios/register"><h3>Registrate con tu email</h3></a>
                     </div>
                 </div>
             </div>
+            <br>
         </main>
        
     </body>

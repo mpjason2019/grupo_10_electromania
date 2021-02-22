@@ -491,6 +491,7 @@ header div.header-hiding{
     width: 70%;
     margin: 0 auto;
     margin-top: 40px;
+    height: auto;
 }
 h1.login-page{
     font-size: 24px;
@@ -507,9 +508,7 @@ h3.login-page{
 h4.login-page{
     font-weight:bold;
     text-align: left;
-    width: 100%;
-    padding: 5px;
-    margin: 15px;
+        margin: 15px;
 }
 p.login-page{
     font-size:1rem;
@@ -619,6 +618,90 @@ div.top-header-login{
         margin: 10px;
         color: #001772;
     }
+ input.boton-login{
+     
+     background-color: #001772;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
+
+ div.boton-login{
+     text-align: center;
+ }
+
+ /* aqui conmienza el registro de usuario/*/
+
+div.register{
+    background-color: #FFF;
+}
+
+body.register-page{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: auto;
+}
+h1.register-page{
+    font-size: 24px;
+    text-align: left;
+    font-weight:bold;
+    margin: 11px;
+    color: #808080;
+}
+h3.register-page{
+    font-size: 15px;
+    text-align: center;
+    color: #808080;
+}
+h4.register-page{
+    font-weight:bold;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    margin: 15px;
+}
+p.register-page{
+    font-size:1rem;
+    vertical-align: middle;
+}
+.insert-register{
+    width: 100%;
+    margin: 5px;
+    background-color: lightgrey ;
+    border: 1px solid lightgrey;
+    align-content: center;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.form-register{
+    width: 70%;
+    margin: 0 auto;
+}
+
+a.ingresa{
+    text-decoration: none;
+}
+
+input.boton-register{
+    margin-left: 5px;
+    background-color: #001772;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+div.boton-register{
+    text-align: center;
+}
 
 
     /* aqui conmienza el detalle del producto*/
@@ -871,7 +954,7 @@ div.pantalla h4,
             color: black;
             background-color: white;
             
-            margin: auto 80px;
+            
         }
 
 
@@ -966,7 +1049,16 @@ div.pantalla h4,
         font-size: 12px;
     }
 
+/*aqui comienza el login*/
+    .titulo {
+        margin: auto 100px;
+    }
 
+/*aqui comienza el register*/
+
+    h3.register-page{
+        font-size: 20px;
+    }
     /*aqui comienza el FOOTER*/
 
     .company-description-footer{
@@ -1133,7 +1225,10 @@ margin-top: 17px;
           
         }
 
-
+/*aqui comienza el login*/
+.titulo {
+    margin: auto 200px;
+}
 
 /* aqui comienza el FOOTER*/
 

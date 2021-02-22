@@ -13,6 +13,16 @@
     <script src="https://kit.fontawesome.com/7966d58261.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <div class="top-header-login">
+            
+            <h2 class="nombre-login">electromania</h2>
+            <div class="logo-login">
+                <a href="/"><img src="/images/favicon.JPG" class="logo"></a>
+            </div>
+       </div> 
+    
+      </header>
     <main>
         <h2 class="cart-title">Mi carrito</h2>
         <hr class="divider-line">
@@ -88,8 +98,8 @@
                     </div>
                     <div class="payment-titles margins">¿Tenés un cupon?</div>
                     <p class="buy-coupon">Ingresa un cupon de descuento</p>
-                    <div class="buy-button-tablet-desktop">
-                        <p class="buy-final">COMPRAR</p>
+                    <div class="boton-comprar">
+                        <input class="boton-comprar" type="submit" class="submit" value="Comprar">
                     </div>
                 </div>
             </div>
@@ -112,16 +122,14 @@
             </div>
         </div> 
 
-        <div class="buy-button">
-                <p class="buy-final">COMPRAR</p>
-        </div>
+        
 
         </section>
     </main>
     <footer>
         <article>
             <div class="company-description-footer">
-                <a href="/"><img class="footer-logo" src="images/logo2.JPG" alt="logo-electro-mania" title="Electromania - Home"></a>
+                <a href="/"><img class="footer-logo" src="/images/logo2.JPG" alt="logo-electro-mania" title="Electromania - Home"></a>
                 <div class="footer-company-description">
                     <p> Somos la empresas numero 1 en Argentina en la venta y distribucion de productos electronicos. Tecnologia, electrodomesticos y articulos para el hogar. Todo en un solo lugar y con envio gratuito a todo el pais. </p>
                     </div>
@@ -176,13 +184,15 @@
             <div class="newsletter-form">
                 <h2 class="footer-titles">Recibi ofertas y promociones</h2>
                 <form action="" method="">
-                    <div>
-                        <label for="email">
-                            <input class="newsletter-input" type="email" id="email" placeholder="Ingrese su email...">
-                        </label>
-                        <!-- <div>
+                    <div class="cart-ofertas">
+                        <div>
+                            <label for="email">
+                                <input class="newsletter-input" type="email" id="email" placeholder="Ingrese su email...">
+                            </label>
+                        </div>    
+                        <div>
                             <button class="newsletter-button-send" type="submit" >Enviar</button>
-                        </div> -->
+                        </div>
                     </div>
                 </form>
             </div>

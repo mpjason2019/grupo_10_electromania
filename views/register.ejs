@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electromania</title>
-  <link  rel="icon" type="image/png" href="/images/favicon.JPG"  />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/d80f5cb230.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/CSS/normalize.css">
-  <link rel="stylesheet" href="/css/register.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromania</title>
+    <link  rel="icon" type="image/png" href="/images/favicon.JPG"  />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d80f5cb230.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
 </head>
-<body>
+
+<body class="register-page">
+  <header>
+    <div class="top-header-login">
+        
+        <h2 class="nombre-login">electromania</h2>
+        <div class="logo-login">
+            <a href="/"><img src="/images/favicon.JPG" class="logo"></a>
+        </div>
+   </div> 
+
+  </header>
     <div class="container">
         <div class="login-container">
           <div class="register">
-            <h2>Registrate</h2>
-            <h4>¿Ya tenés cuenta?<a href="/login">Ingresá aqui</a></h4>
+            <h1 class="register-page">Registrate</h1>
+            <h4 class="register-page">¿Ya tenés cuenta?<a  class="ingresa" href="/usuarios/login"> Ingresá aqui</a></h4>
             <br>
-            <form action="/usuarios/register" method="POST">
-              <h3>Nombre</h3>
-              <input class="nombre" type="text" name="nombre" required>
-              <h3>Apellido</h3>
-              <input class="apellido" type="text" name="apellido" required>
-              <h3>Email</h3>
-              <input class="correo" type="email" name="correo" required>
-              <h3>Contraseña</h3>
-              <input class="pass" type="password" name="Contraseña" required>
-              <h3>Repetir contraseña</h3>
-              <input class="repass" type="password" name="Confirma contraseña" required>
-              <div>
-              <input type="submit" class="submit" value="Crear cuenta">
-              </div>
-              <hr> o
-              <hr>
+            <form class="form-register" action="/usuarios/register" method="POST">
+              <h3 class="register-page">Nombre</h3>
+              <input class="insert-register" type="text" name="nombre" required placeholder="Ingresá tu nombre"> 
+              <h3 class="register-page">Apellido</h3>
+              <input class="insert-register" type="text" name="apellido" required placeholder="Ingresá tu apellido">
+              <h3 class="register-page">Email</h3>
+              <input class="insert-register" type="email" name="correo" required placeholder="Ingresá un mail valido">
+              <h3 class="register-page">Contraseña</h3>
+              <input class="insert-register" type="password" name="Contraseña" required placeholder="Recordá que sea alfanumerica"> 
+              <h3 class="register-page">Repetir contraseña</h3>
+              <input class="insert-register" type="password" name="Confirma contraseña" required placeholder="Repetí tu contraseña">
               <br>
-              <div class="login-items">
-                  <div><a class="link" href="#">Inicia sesion con Facebook</a></div>
-                  <div><a class="link" href="#">Inicia sesion con Google</a></div>
+              <br>
+              <div class="boton-register">
+              <input class="boton-register" type="submit" class="submit" value="Crear cuenta">
               </div>
-            </form>
-          </div>
+              <br>
+              <h3 class="register-page">O</h3>   
+              <br> 
+            </form>          
+            <section >
+                <div class="ctatrs">
+                    <div class="ctatrs2">
+                        <div class="cuentatrs">                        
+                            <a  href="#">Iniciar sesión con Facebook</a>                       
+                        </div>
+                    </div>
+                    <div class="ctatrs2">
+                        <div class="cuentatrs">                      
+                            <a  href="#">Iniciar sesión con Google</a>                        
+                        </div>
+                    </div>    
+                </div>
+            </section>
+            <br>
+           </div>
         </div>
     </div>   
 </body>
