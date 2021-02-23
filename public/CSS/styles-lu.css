@@ -393,8 +393,9 @@ div.cart-ofertas{
     .newsletter-button-send{
         margin-top: 0;
         margin-left: 10px;
-   
+    }
 }
+
 
 @media(min-width:1200px){
 
@@ -426,5 +427,4 @@ div.cart-ofertas{
        margin: auto;
    }
 
-}
 }

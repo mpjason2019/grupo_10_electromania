@@ -401,6 +401,7 @@ header div.header-hiding{
          max-width: 40%;
          margin: auto;
          display: block;
+         width: 100%;
     }
     
     .footer-company-description{
@@ -461,6 +462,7 @@ header div.header-hiding{
         display: block;
         margin-top: 10px;
         border-radius: 10px;
+        margin-bottom: 5px;
     
     }
     
@@ -871,7 +873,220 @@ div.pantalla h4,
     width: 100%;
 }
 
+/*aqui comienza el carrito de compras*/
+
+    a.usario-login{
+        text-decoration: none;
+    }
+
+ body.cart-page{
+     background-color: #FFF;
+     width: 95%;
+     margin: 0 auto;
+ }
+
+.cart-title{
+    text-align: center;
+    margin: 10px;
+}
+
+.login-request{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding: 15px;
+    border-width: 1px;
+}
+
+.login-buy{
+    text-align: center;
+}
+
+.login-buy-button{
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+
+}
+
+.product-summary{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding-bottom: 5px;
+    border-width: 1px;
+    padding: 10px;
+   
+}
+
+
+
+.product-summary2{
+    border-radius: 10px;
+    border-color: grey;
+    margin: 10px;
+    border-style: solid;
+    padding-bottom: 5px;
+    border-width: 1px;
+    padding: 10px;
     
+}
+
+.product-details{
+    font-size: 15px;
+}
+
+.cart-item-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-cart{
+    max-width: 30%;
+    margin: 2px;
+}
+
+.model{
+    color: blue;
+    font: 15px;
+}
+
+.buy-titles{
+    font-weight: bold;
+}
+
+.buy-details{
+    font-size: 0.8em;
+}
+
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-final-payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.guarantee-choose{
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.payment-titles{
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    
+}
+
+.margins{
+    margin-top: 10px;
+}
+
+.buy-coupon{
+    color: lightgray;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.important{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-final-payment-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.secure-icon{
+    text-align: center;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    max-width: 40px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.secure-info{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2px;
+
+}
+
+.secure-details{
+    font-size: 0.8em;
+    color: grey;
+    text-align: center;
+    margin-top: 2px;
+
+}
+
+input.boton-comprar{
+    margin-left: 5px;
+    background-color: #001772;
+    border: none;
+    font-size: 24px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+}
+div.boton-comprar{
+    text-align: center;
+  
+}
+
+
+.purchase-advantages{
+    display: block;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 15px 0;
+    margin: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.secure-purchase{
+    margin: 0 15px;
+    box-sizing: border-box;
+    
+}
+
+div.cart-ofertas{
+    display: block;
+}
+
+
+main.cart-page{
+    background-color: #FFF;
+}
+
 
 @media (min-width: 361px){
 
@@ -1069,8 +1284,9 @@ div.pantalla h4,
     }
 
     .footer-logo{
-        max-width: 25%;
+        max-width: 100%;
         margin-left: 20px ;
+            width: 100%;
    }
 
    .footer-company-description{
@@ -1176,6 +1392,130 @@ margin-top: 17px;
         display: block;
     }
 
+
+/* aqui commienza el carrito de compras*/
+
+    .purchase-advantages{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .product-summary2{
+        padding: 30px 40px;
+        width: 50%;
+    }
+
+
+    .login-buy{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .login-buy-button{
+        text-align: left;
+        margin-left: 20px;
+        padding-top: 5px;
+    }
+
+    .buy-button-tablet-desktop{
+        background-color: #001772;
+        padding: 5px 0;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        margin: 15px 0;
+        border-radius: 10px;
+    }
+
+    .buy-coupon{
+        margin: 20px 0px 35px 10px;
+    }
+
+    .buy-button{
+        display: none;
+    }
+
+    .secure-purchase{
+        display: block;
+        margin: 0 30px;
+    }
+
+    .product-summary{
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+  
+
+
+    .main-product-container{
+        display: flex;
+        justify-content: space-between;
+        
+        
+    }
+
+    .login-request{
+        max-width: 100%;
+    }
+    .company-description-footer{
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-around;
+        padding: 0px 20px;
+    }
+
+    .footer-logo{
+        
+        margin-left: 20px ;
+        width: 100%;
+    }
+
+    .footer-company-description{
+    max-width: 30%;
+    text-align:justify;
+    margin-right: 0px;
+    padding: 0 0px;
+    }
+
+    .group-social-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    }
+
+    .recommended-list-general{
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    .reccomended{
+        width: 40%;
+    }
+
+    .newsletter-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-titles{
+        padding-right: 20px;
+    }
+    div.cart-ofertas{
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .newsletter-button-send{
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+
 }
 
 @media (min-width: 1000px){
@@ -1250,8 +1590,9 @@ margin-top: 17px;
     }
 
     .footer-logo{
-        max-width: 25%;
+       
         margin-left: 20px ;
+        width: 100%;
     }
 
     .copyright{
@@ -1259,6 +1600,30 @@ margin-top: 17px;
     display: block;
     margin: auto;
     }
+
+
+    /*aqui va el carrito de compras*/
+
+    .company-description-footer{
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+
+ 
+    .footer-logo{
+       margin-top: 15px;
+        margin-left: 20px ;
+        width: 100%;
+   }
+
+   .copyright{
+       max-width: 1200px;
+       display: block;
+       margin: auto;
+   }
 
 
 }
@@ -1271,4 +1636,7 @@ margin-top: 17px;
         margin-left: 576px;
         
     }
+
+
+
 }
