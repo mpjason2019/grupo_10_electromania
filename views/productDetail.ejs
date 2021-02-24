@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="utf-8" class="aAX">
-    <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromania</title>
-    <link  rel="icon" type="image/png" href="/images/favicon.JPG"  />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d80f5cb230.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/CSS/normalize.css">
-    <link rel="stylesheet" href="/CSS/styles.css">
-    </head>
-</head>
+<%- include('partials/head')  %> 
 <body class="producto">
     <header class="main-header">
         <div class="header-hiding">
@@ -207,84 +195,6 @@
         </div> -->
     </main>
     <hr>    
-    <footer>
-        <article>
-            <div class="company-description-footer">
-                <div class="logoFooter">
-                    <img src="/images/logo2.JPG" class="logoFooter">
-                    
-                </div>
-                <div class="footer-company-description">
-                    <p> Somos la empresas numero 1 en Argentina en la venta y distribucion de productos electronicos. Tecnologia, electrodomesticos y articulos para el hogar. Todo en un solo lugar y con envio gratuito a todo el pais. </p>
-                    </div>
-                </div>
-                <div class="group-social-icons">
-                    <div class="social-icons">
-                        <div class="circle-social-icons"><i class="fab fa-facebook"></i></div>     
-                        <div class="circle-social-icons"><i class="fab fa-instagram"></i></div>
-                        <div class="circle-social-icons"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="circle-social-icons"><i class="fab fa-youtube"></i></div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </article>
-        <article>
-            <div class="recommended-list-general">
-                <div class="reccomended">
-                <h2 class="footer-titles">Recomendados Tecnología</h2>
-                    <ul class="reccomended-list">
-                        <li>Smart TV</li>
-                        <li>Consolas de juego</li>
-                        <li>Notebooks</li>
-                        <li>Monitores</li>
-                        <li>Equipos de audio</li>
-                    </ul>
-                </div>
-                <div class="reccomended">
-                <h2 class="footer-titles">Recomendados Electrodomésticos</h2>
-                    <ul class="reccomended-list">
-                        <li>Heladeras</li>
-                        <li>Cocinas</li>
-                        <li>Lavavajillas</li>
-                        <li>Microondas</li>
-                        <li>Cafeteras</li>
-                        <li>Lavarropas</li>
-                    </ul>
-                </div>
-                <div class="reccomended">
-                <h2 class="footer-titles">Recomendados Artículos Hogar</h2>
-                    <ul class="reccomended-list">
-                        <li>Plancha</li>
-                        <li>Aspiradoras</li>
-                        <li>Maquinas de coser</li>
-                        <li>Limpiadores a vapor</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-        </article>
-        <article>
-            <div class="newsletter-form">
-                <h2 class="footer-titles">Recibí ofertas y promociones</h2>
-                <form action="" method="">
-                    <div>
-                        <label for="email">
-                            <input class="newsletter-input" type="email" id="email" placeholder="Ingrese su email...">
-                        </label>
-                        <!-- <div>
-                            <button class="newsletter-button-send" type="submit" >Enviar</button>
-                        </div> -->
-                    </div>
-                </form>
-            </div>
-
-            <hr>
-        </article>
-        <article>
-            <p class="copyright">Copyright © 2021 Electromania. El uso de este sitio web implica la aceptación de los Términos y Condiciones y de las Políticas de Privacidad de Electromania. Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock.
-            </p>
-        </article>
-    </footer>
+    <%- include('partials/footer')  %> 
 </body>
 </html>
