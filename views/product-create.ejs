@@ -24,7 +24,7 @@
   </header>
     <div class="container">
         <div class="login-container">
-          <div class="register">
+          <div class="create-form">
               <form class="form-register" action="/usuarios/register" method="POST">
                 <h3 class="register-page">ID producto</h3>
                 <input class="insert-register" type="text" name="nombre" required placeholder="ID producto">
@@ -38,16 +38,13 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <h3 class="register-page">Categoria</h3>
-                    <select name="category" id="category" class="form-input">
+                    <select name="category" id="category" class="form-create">
                         <option value="">Elegí</option>
                         <option value="in-sale">En oferta</option>
                         <option value="visited">Últimos agregados</option>
                     </select>
                 </div> 
-              <h3 class="register-page">Repetir contraseña</h3>
-              <input class="insert-register" type="password" name="Confirma contraseña" required placeholder="Repetí tu contraseña">
-              <br>
-              <br>
+               <br>
               <div class="boton-register">
               <input class="boton-register" type="submit" class="submit" value="Crear producto">
               </div>

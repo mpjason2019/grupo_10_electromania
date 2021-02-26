@@ -707,6 +707,21 @@ div.boton-register{
 }
 
 
+   /* aqui conmienza creacion de producto*/
+
+   textarea{
+       width: 100%;
+   }
+
+   select.form-create{
+       width: 100%;
+       background-color: lightgrey;
+   }
+
+   .create-form{
+       margin-top: 20px;
+   }
+
     /* aqui conmienza el detalle del producto*/
 
 body.producto{
