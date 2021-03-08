@@ -11,7 +11,7 @@
     {
      "id": 2,
      "name": "Macbook Pro 2022",
-     "price": 500,
+     "price": 150000,
      "discount": 3,
      "category": "in-sale",
      "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
@@ -64,7 +64,7 @@
     },
     {
      "id": 8,
-     "name": "Apple iPhone 11 Pro Dual SIM 256 GB",
+     "name": "Apple iPhone 11 Pro Black Dual SIM 256 GB",
      "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
      "price": 148000,
      "discount": 2,

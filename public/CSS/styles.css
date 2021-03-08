@@ -484,6 +484,48 @@ header div.header-hiding{
      margin: 0 auto;
  }
 
+ /*aqui estan los estilos de la pagina de todos los productos*/
+ div.contenedor-productos{
+     width: 100%;
+     margin: 0 auto;
+ }
+
+ main.producto{
+     width: 100%;
+ }
+
+ section.ofertas-productos{
+    width: 90%;
+    margin: 30px;
+ }
+div.pre-main{
+    justify-content: space-between;
+    display: flex;
+    margin-left: 34px;
+    margin-top: 30px;
+    margin-right: 40px;
+    padding: 15px 30px;
+    align-items: center;
+    align-content: center;
+}
+div h2.titulo-productos{
+
+    font-size: 20px;
+}
+
+a.button-edit{
+
+    font-size: 22px;
+    background-color: #001772;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
  /* aqui comienza Login Page*/
 
 
@@ -1103,6 +1145,15 @@ main.cart-page{
     background-color: #FFF;
 }
 
+p.precio{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
 
 @media (min-width: 361px){
 
@@ -1187,7 +1238,7 @@ main.cart-page{
             
             
         }
-
+      
 
 }
 
@@ -1278,6 +1329,17 @@ main.cart-page{
 
     div.hiding p{
         font-size: 12px;
+    }
+
+    main.producto{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    section.ofertas-productos{
+        width: 25%;
     }
 
 /*aqui comienza el login*/
@@ -1531,6 +1593,9 @@ margin-top: 17px;
         margin-left: 10px;
     }
 
+    div.contenedor-productos{
+        max-width: 768px
+    }
 
 }
 
@@ -1652,7 +1717,9 @@ margin-top: 17px;
         margin-left: 576px;
         
     }
-
+    div.contenedor-productos{
+        max-width: 1200px
+    }
 
 
 }
