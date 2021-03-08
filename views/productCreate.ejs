@@ -25,13 +25,13 @@
     <div class="container">
         <div class="login-container">
           <div class="create-form">
-              <form class="form-register" action="/usuarios/register" method="POST">
+              <form class="form-register" action="/productos/create" method="POST" enctype="multipart/form-data">
                 <h3 class="register-page">ID producto</h3>
-                <input class="insert-register" type="text" name="nombre" required placeholder="ID producto">
+                <input class="insert-register" type="text" name="id" required placeholder="ID producto">
                 <h3 class="register-page">Nombre del producto</h3>
-              <input class="insert-register" type="text" name="nombre" required placeholder="Nombre del producto"> 
+              <input class="insert-register" type="text" name="name" required placeholder="Nombre del producto"> 
               <h3 class="register-page">Precio</h3>
-              <input class="insert-register" type="text" name="apellido" required placeholder="Precio">
+              <input class="insert-register" type="text" name="price" required placeholder="Precio">
               <h3 class="register-page">Descripcion</h3>
               <div class="col-12">
                 <textarea name="description" id="description" class="form-input"></textarea>
@@ -44,6 +44,9 @@
                         <option value="visited">Últimos agregados</option>
                     </select>
                 </div> 
+                <div>
+                  <input class="" type="file" name="image" required>
+                </div>
                <br>
               <div class="boton-register">
               <input class="boton-register" type="submit" class="submit" value="Crear producto">

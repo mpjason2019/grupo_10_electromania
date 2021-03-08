@@ -5,9 +5,12 @@ const rutaProductos=require('./routes/productos.js');
 const rutaMain=require('./routes/main.js');
 const rutaUsuarios= require('./routes/usuarios.js');
 const methodOverride = require('method-override');
+
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(methodOverride("_method"))
+app.use(express.urlencoded({ extended: false }));
+
 
 app.use('/',rutaMain);
 app.use('/productos',rutaProductos);

@@ -15,13 +15,40 @@ const productosController ={
     carDetalle:  (req, res) =>{
         res.render('productCart');
     },
-    detalle:  (req, res) =>{
-        res.render('productDetail');
-    },
+
+    detalle:  (req, res) => {
+		let produc = productos.find(produc => produc.id==req.params.id)
+		res.render('productDetail',{produc,toThousand})
+	},
 
     create:  (req, res) =>{
         res.render('productCreate');
-    }
+    },
+
+	store: (req, res) => {
+		let image
+		
+		if(req.file != undefined){
+			image = req.file.filename
+            console.log(req.file.filename);
+		} else {
+			image = 'default-image.png'
+		}
+		
+		let ids = productos.map(p=>p.id)
+		let newProduct = {
+			id: Math.max(...ids)+1,
+			...req.body,
+			image: image
+		};
+		// res.send(newProduct)
+		productos.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+		res.redirect('/');
+	},
+
+    
+    
 }
 
 

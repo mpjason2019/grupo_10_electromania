@@ -5,7 +5,7 @@ const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Multer
 const storage = multer.diskStorage({ 
@@ -22,10 +22,10 @@ router.get('/', productosController.index);
 
 router.get('/productCart', productosController.carDetalle);
 
-router.get('/productDetail', productosController.detalle);
+router.get('/productDetail/:id', productosController.detalle);
 
 router.get('/create', productosController.create);
-
+router.post('/create', upload.single('image'), productosController.store); 
 
 
 module.exports = router;

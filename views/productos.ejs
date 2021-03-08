@@ -14,7 +14,6 @@
             <% for (producto of inSale) { %> 
             <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : product.price;%>
                 <section class="ofertas-productos">
-
                             <article>
                                 <a href="#">
                                     <img src="/images/<%= producto.image %>" alt="">
