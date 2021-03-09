@@ -17,7 +17,7 @@ const productosController ={
     },
 
     detalle:  (req, res) => {
-		let produc = productos.find(produc => produc.id==req.params.id)
+		let produc = productos.find(product => product.id==req.params.id)
 		res.render('productDetail',{produc,toThousand})
 	},
 

@@ -53,18 +53,18 @@
         </nav>   
     </div> 
     <main>
+        <% let finalPrice=produc.discount ? (produc.price - produc.price * produc.discount / 100).toFixed(0) : produc.price;%>
         <section class="main-producto">
             <div class="main-article">
                 <div class="main-article-images">
-                    <img src="/images/img-tv-samsung-smart.jpg" alt="">
+                    <img src="/images/<%= produc.image %>" alt="">
                 </div>    
             </div>
             <div class="main-article-description">
                 <div class="description">
-                    <p class="descripcion1">Televisor Samsung 32"</p>
-                    <p class="descripcion1">$26.499</p>
-                    <p class="descripcion4">$29.999</p>
-                    <p class="descripcion2">12 OFF</p>
+                    <p class="descripcion1"><%= produc.name %></p>
+                    <p class="descripcion1"><%= toThousand(finalPrice) %></p>
+                    <p class="descripcion2"><%- produc.discount ? `<span>${produc.discount}% OFF</span>` : '' %> </p>
                    
                 </div>
                 <div class="payment">
