@@ -18,25 +18,24 @@
       
         <h2 class="nombre">electromania</h2>
         <div class="logo">
-            <img src="/images/favicon.JPG" class="logo">
+            <a href="/"><img src="/images/favicon.JPG" class="logo"></a>
             
         </div>
         
-        <div class="form" action="#" method="GET">
-            <div class="input">Buscar productos, marcas y más</div>
-            <div class="buscar"><input class="boton" type="submit" value="Buscar"></div>
-            <!-- <div class="hamburger-buttom">
-                <i class="fas fa-bars"></i>
-            </div> -->
+        <div class="form">
+            <form action="/search" method="GET" class="search-form">
+                <div class="input"><input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input"></div>
+                <div class="buscar"><button type="submit" class="boton"><i class="fas fa-search"></i></button></div>
+            </form>
         </div>  
 
             <div class="hamburger-buttom">
                 <i class="fas fa-bars"></i>
             </div>
             <div class="sesion">
-                <a class="sesiona" href="./usuarios/register">Regístrate</a>
+                <a class="sesiona" href="/usuarios/register">Regístrate</a>
                 <a class="sesiona" href="#">|</a>
-                <a class="sesiona" href="./usuarios/login">Inicia Sesión</a>
+                <a class="sesiona" href="/usuarios/login">Inicia Sesión</a>
                 <a href="./productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>
             </div> 
          

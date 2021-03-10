@@ -91,8 +91,8 @@ header .form .input{
     background-color: #FFF;
     outline: none;
     color: #666;
-    padding: 3px;
-    border-radius: 10px;
+    
+    border-radius: 5px;
 }
 
 header .form .submit{
@@ -244,12 +244,14 @@ main section article{
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    height: 100%;
 }
 
 
 main section article i,
 .descuentos{
     color: #39b54a;
+    
 }
 
 
@@ -498,6 +500,8 @@ header div.header-hiding{
     width: 90%;
     margin: 30px;
  }
+
+ 
 div.pre-main{
     justify-content: space-between;
     display: flex;
@@ -511,6 +515,11 @@ div.pre-main{
 div h2.titulo-productos{
 
     font-size: 20px;
+    
+}
+div.titulo-productos h2{
+
+    margin: 10px;
 }
 
 a.button-edit{
@@ -523,6 +532,10 @@ a.button-edit{
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+}
+
+i.fas{
+    font-size : 23px    ;
 }
 
 
@@ -691,6 +704,16 @@ body.register-page{
     margin-top: 40px;
     height: auto;
 }
+
+body.edit-page{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 700px;
+}
+
 h1.register-page{
     font-size: 24px;
     text-align: left;
@@ -747,9 +770,14 @@ input.boton-register{
 div.boton-register{
     text-align: center;
 }
-
+form.search-form{
+    display: flex;
+}
 
    /* aqui conmienza creacion de producto*/
+input.file{
+    margin: 10px auto;
+}
 
    textarea{
        width: 100%;
@@ -869,6 +897,8 @@ div.ofertas-pro h3{
     font-weight: 500;
 }
 
+
+
 div.fab{
     color: #0000ff;
     font-size: 40px;
@@ -891,7 +921,7 @@ div.ofertas-tc{
 
 .paymentbtn{
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background-color: #ECEAEB;
 
 }
@@ -901,6 +931,35 @@ div.paybt{
     padding: 10px;
     border-radius:5px; 
     
+}
+div.edit-delete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+}
+
+div.edit-b{
+    background-color: #0000ff;
+    padding: 10px;
+    border-radius:5px; 
+
+    text-decoration: none;
+      
+}
+div.edit-b a{
+    color: #fff;
+    text-decoration: none;
+}
+
+div.delete-b{
+    border-radius:2px;
+    background-color: #ff7b00;
+    padding: 10px;
+    border-radius:5px; 
+    
+  
 }
 
 
@@ -924,6 +983,7 @@ div.pantalla h4,
     font-size: 20px;
     letter-spacing: 0.4px;
     text-transform: uppercase;
+    
 }
 
 .btnComprar{
@@ -1157,27 +1217,30 @@ p.precio{
 
 @media (min-width: 361px){
 
-    
+    main.index{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     main section article{
         box-shadow: 0px 0px 20px rgb(100, 100, 100);
     }
 
-    main section div.products{
+    /* main section div.products{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         
-    }
+    } */
 
     
 
       
-    main section div.products article{
+    /* main section div.products article{
         width: 45%;
         margin: 10px auto;
-    }
+    } */
 
     .precios,
     .descuentos{
@@ -1187,15 +1250,6 @@ p.precio{
 
    
     header .form {
-
-
-
-
-
-
-
-
-
 
         margin-left: auto;
         margin-right: auto;
@@ -1238,10 +1292,19 @@ p.precio{
             
             
         }
-      
+        main.index{
+            display: flex;
+            width: 70%;
+            margin: 0 auto;
+            
+        }
+        main.index section div.products article{
+            width: 45%;
+            margin: 10px auto;
+         
 
+    }
 }
-
 
 
 
@@ -1340,8 +1403,23 @@ p.precio{
 
     section.ofertas-productos{
         width: 25%;
+        transition: 300ms;
     }
-
+    section.ofertas{
+        width: 15%;
+        margin: 25px 5px;
+    }
+    main.index{
+        width: 95%;
+        justify-content: space-between;
+    }
+    section.ofertas-productosDetail{
+        display: flex;
+       width: 90%;
+       margin: 30px;
+       flex-wrap: wrap;
+       justify-content: space-around;
+    }
 /*aqui comienza el login*/
     .titulo {
         margin: auto 100px;

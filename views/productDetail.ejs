@@ -1,69 +1,20 @@
 <%- include('partials/head')  %> 
+<%- include('partials/header')  %> 
 <body class="producto">
-    <header class="main-header">
-        <div class="header-hiding">
-            <div class="hiding">
-                <p>Centro de ayuda</p>
-                <p>Servicio Técnico</p>
-                <p>Venta telefónica</p>
-                
-            </div>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-       
-        <div class="top-header">
-            <h2 class="nombre">electromania</h2>
-            <div class="logo">
-                <a href="/"><img src="/images/favicon.JPG" class="logo"></a>
-                
-            </div>
-            
-            <div class="form" action="#" method="GET">
-                <div class="input">Buscar productos, marcas y más</div>
-                <div class="buscar"><input class="boton" type="submit" value="Buscar"></div>
-                <!-- <div class="hamburger-buttom">
-                    <i class="fas fa-bars"></i>
-                </div> -->
-            </div>  
+    <%- include('partials/navbar')  %>  
 
-                <div class="hamburger-buttom">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div class="sesion">
-                    <a class="sesiona" href="/usuarios/register">Registrate</a>
-                    <a class="sesiona" href="#">|</a>
-                    <a class="sesiona" href="/usuarios/login">Inicia Sesión</a>
-                    <a href="/productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>
-                </div> 
-        </div>    
-    </header>
-    <div class="divnavbar">
-        <nav class="main-navbar">
-            <div class="categoriasli"> <a href="#"> Televisores</a> </div>
-            <div class="categoriasli"> <a href="#">Audio y Video</a> </div>
-            <div class="categoriasli"> <a href="#">Notebook y Tables</a> </div>
-            <div class="categoriasli"> <a href="#">Celulares</a> </div>
-            <div class="categoriasli"> <a href="#">Electrodomésticos</a> </div>
-            <div class="categoriasli"> <a href="#">Otras categorías</a> </div>
-        </nav>   
-    </div> 
     <main>
         <% let finalPrice=produc.discount ? (produc.price - produc.price * produc.discount / 100).toFixed(0) : produc.price;%>
         <section class="main-producto">
             <div class="main-article">
                 <div class="main-article-images">
-                    <img src="/images/<%= produc.image %>" alt="">
+                    <img src="/images/products/<%= produc.image %>" alt="">
                 </div>    
             </div>
             <div class="main-article-description">
                 <div class="description">
                     <p class="descripcion1"><%= produc.name %></p>
-                    <p class="descripcion1"><%= toThousand(finalPrice) %></p>
+                    <p class="descripcion1"><%= '$ '+toThousand(finalPrice) %></p>
                     <p class="descripcion2"><%- produc.discount ? `<span>${produc.discount}% OFF</span>` : '' %> </p>
                    
                 </div>
@@ -87,112 +38,56 @@
                 </div>
                 <div class="paymentbtn">
                     <div class="paybt">
-                       <a href="#">comprar</a>
-                    </div>    
+                        <a href="#" class="action-button edit">Comprar</a>
+                    </div>
+                </div>
+                <div class="edit-delete">    
+                    <div class="edit-b">
+                        <a href="/productos/<%= produc.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+                    </div>      
+                    <diV class="delete-b">
+                        <form action="/productos/<%= produc.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+                    </diV> 
                 </div>
             </div>
         </section>
-        <section class="Producto">
-            <h2 class="titulo1">Personas interesadas en este producto también vieron</h2>
-            <div class="products">
-                <article>
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                </article>
-                <article>
-                    
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                
-                </article>
-                <article>
-                    
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    
-                </article>
-                <article>
-                    
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    
-                </article>
-                <article>
-                    
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                
-                </article>
-                <article>
-                    
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    
-                </article>
-            </div>       
+        <h2 class="titulo1">Personas interesadas en este producto también vieron</h2>
+        <section class="ofertas-productosDetail">
+            <% for (producto of inSale) { %> 
+                <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : producto.price;%>
+                    <section class="ofertas-productos">
+                                <article>
+                                    <a href="/productos/productDetail/<%=producto.id%>">
+                                        <img src="/images/products/<%= producto.image %>" alt="">
+                                        <div class="productos2">
+                                            <hr>
+                                            <p class="descripcion1"> <%= producto.name %> </p>
+                                            <p class="descripcion2"> <%- producto.discount ? `<span>${producto.discount}% OFF</span>` : '' %>  </p> 
+                                            <p class="precio">$<%= toThousand(finalPrice) %></p>
+                                            <h4 class="descripcion3">Ahora 12</h4>
+                                        </div>  
+                                    </a>      
+                                </article>
+            
+                    </section>
+            
+                <% } %> 
+
+
         </section>
         <section class="main-producto-spects">
             <div class="main-article-spects">
                 <br>
-                <h3 class="pantalla">PANTALLA</h3>
+                <h3 class="pantalla">DETALLE</h3>
                 <div class="pantalla">
-                    <h4>Tipo de Pantalla : LED</h4>
-                    <h4>Pulgadas : 32"</h4>
-                    <h4>Resolución de Video : HD</h4>
-                    <h4>Relación de Aspecto : 16:9</h4>
-                    <h4>Norma de Video : NTSC, PAL, PAL-M, PAL-N</h4>
-                    <h4>Tipo de TV : Smart TV</h4>
-                    <h4>Formato de Pantalla : Plana</h4>
-                    <h4>Resolución  : 1366x768 </h4>
-                    <h4>Frecuencia de Refresco : 60 Hz</h4>
+                    <h4><%=produc.description%> </h4>
+                 
                 </div>
-                <hr>
-                <h3 class="dimensiones">DIMENSIONES</h3>
-                <div class="dimensiones">
-                    <h4>Medidas VESA : 200x200</h4>
-                    <h4>Ancho : 74.54 cm</h4>
-                    <h4>Alto (con Base) : 74.54 cm</h4>
-                    <h4>Profundidad (con base): 15.05 cm</h4>
-                    <h4>Alto : 44.22 cm</h4>
-                    <h4>Profundidad : 6.9 cm</h4>
-                    <h4>Ancho (con base) : 46.31 cm</h4>
-                    <h4>Peso : 3.8 kg</h4>
-                </div>
+               
             </div>
         </section>    
-        <!-- <div class="divbaner">
-            <img class="baner" src="/images/img-home-banner.jpg" alt="">
-        </div> -->
     </main>
     <hr>    
     <%- include('partials/footer')  %> 

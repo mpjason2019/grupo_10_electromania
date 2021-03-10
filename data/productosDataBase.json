@@ -123,7 +123,7 @@
   "price": 10999,
   "discount": 5,
   "image": "img-sony-blueray.jpg",
-  "category": "visited"
+  "category": "in-sale"
  },
  {
   "id": 15,
@@ -132,7 +132,7 @@
   "price": 15979,
   "discount": 12,
   "image": "img-bicicleta-fierce.jpg",
-  "category": "visited"
+  "category": "in-sale"
  },
  {
   "id": 16,
@@ -142,13 +142,5 @@
   "category": "in-sale",
   "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
   "image": "img-parlante-sony.jpg"
- },
- {
-  "id": "32",
-  "name": "Computadora Lenovo",
-  "price": "123121",
-  "description": "Notebook Lenovo 15 pulgadas 128GB 8GB Ram",
-  "category": "in-sale",
-  "image": "default-image.png"
  }
 ]

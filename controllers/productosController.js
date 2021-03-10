@@ -18,7 +18,8 @@ const productosController ={
 
     detalle:  (req, res) => {
 		let produc = productos.find(product => product.id==req.params.id)
-		res.render('productDetail',{produc,toThousand})
+		const inSale = productos.filter(producto => producto.category== 'in-sale');
+		res.render('productDetail',{produc,inSale,toThousand})
 	},
 
     create:  (req, res) =>{
@@ -46,9 +47,44 @@ const productosController ={
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/');
 	},
+	// Update - Form to edit
+	edit: (req, res) => {
+		let productToEdit = productos.find(product=>product.id==req.params.id)
+		res.render('productEdit',{productToEdit,toThousand})
+	},
+    update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = productos.find(product => product.id == id)
+		let image
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = productToEdit.image
+		}
 
-    
-    
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newProducts = productos.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},
+    // Delete - Delete one product from DB
+	destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProducts = productos.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	}
 }
 
 

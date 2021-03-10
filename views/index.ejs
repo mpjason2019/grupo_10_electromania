@@ -2,85 +2,35 @@
 <body>
     <%- include('partials/header')  %> 
     <%- include('partials/navbar')  %> 
-    <main>
     <div class="divbaner"><img class="baner" src="/images/img-home-banner.jpg" alt=""></div>
-           
-        <section class="ofertas">
-            <h2 class="titulo1">Ofertas destacadas</h2>
-            <div class="products">
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>  
-                    </a>      
-                </article>
-             
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-samsung-galaxy-s10.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Celular Samsung Galaxy S20+</p>
-                            <p class="descripcion2">15% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    </a>
-                </article>
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-cafetera-moulinex.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Cafetera Dolce-Gusto</p>
-                            <p class="descripcion2">10% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    </a>
-                </article>
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">10% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    </a>
-                </article>
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-macbook-pro-2019.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Mc Book Pro 15"</p>
-                            <p class="descripcion2">20% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    </a>    
-                </article>
-                <article>
-                    <a href="./productos/productDetail">
-                        <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                        <div class="productos2">
-                            <hr>
-                            <p class="descripcion1">Televisor Samsung 32"</p>
-                            <p class="descripcion2">30% OFF</p>
-                            <h4 class="descripcion3">Ahora 12</h4>
-                        </div>    
-                    </a>
-                </article>
-            </div>       
-        </section>
+    <h2 class="titulo1">Ofertas destacadas</h2>
     
-   
-        <div class="divbaner"><img class="baner" src="/images/img-home-banner.jpg" alt=""></div>
+    <main class="index">
+     <% for (producto of visited){ %>
+        <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : producto.price;%>    
+        
+        
+            <section class="ofertas">
+              
+                
+                    <article>
+                        <a href="/productos/productDetail/<%=producto.id%>">
+                            <img src="/images/products/<%= producto.image %>" alt="">
+                            <div class="productos2">
+                                <hr>
+                                <p class="descripcion1"><%= producto.name %></p>
+                                <p class="descripcion2"><%- producto.discount ? `<span>${producto.discount}% OFF</span>` : '' %> </p>
+                                <p class="precio">$<%= toThousand(finalPrice) %></p>
+                                <h4 class="descripcion3">Ahora 12</h4>
+                            </div>  
+                        </a>      
+                    </article>
+                  
+            </section>
+         
+    <% } %> 
     </main>
+    <div class="divbaner"><img class="baner" src="/images/img-home-banner.jpg" alt=""></div>
     <hr>    
     <%- include('partials/footer')  %>
  </body>

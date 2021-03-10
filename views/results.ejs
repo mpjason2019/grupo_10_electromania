@@ -5,22 +5,24 @@
         <%- include('partials/navbar')  %> 
 <div class="contenedor-productos"> 
         <div class="pre-main">
-        <h2 class="titulo-productos">Todos los productos</h2>
-        <a href="/productos/create" class="button-edit">CREAR PRODUCTO</a>
+        <h2 class="titulo-productos">Resultados de la búsqueda: <%= search %></h2>
         </div>
       
         <main class="producto">    
         
-            <% for (producto of inSale) { %> 
-            <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : producto.price;%>
+            <% if (products.length) { %>
+			 
+				<% for (product of products) { 
+					let finalPrice=product.discount ? (product.price - product.price * product.discount / 100).toFixed(0) : product.price; 
+				%>
                 <section class="ofertas-productos">
                             <article>
-                                <a href="/productos/productDetail/<%=producto.id%>">
-                                    <img src="/images/products/<%= producto.image %>" alt="">
+                                <a href="/productos/productDetail/<%=product.id%>">
+                                    <img src="/images/products/<%= product.image %>" alt="">
                                     <div class="productos2">
                                         <hr>
-                                        <p class="descripcion1"> <%= producto.name %> </p>
-                                        <p class="descripcion2"> <%- producto.discount ? `<span>${producto.discount}% OFF</span>` : '' %>  </p> 
+                                        <p class="descripcion1"> <%= product.name %> </p>
+                                        <p class="descripcion2"> <%- product.discount ? `<span>${product    .discount}% OFF</span>` : '' %>  </p> 
                                         <p class="precio">$<%= toThousand(finalPrice) %></p>
                                         <h4 class="descripcion3">Ahora 12</h4>
                                     </div>  
@@ -30,6 +32,11 @@
                 </section>
         
             <% } %> 
+            <% } else { %>
+				<div class="titulo-productos">
+					<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+				</div>
+			<% } %>
         
         </main>
 </div> 
