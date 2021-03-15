@@ -1,36 +1,26 @@
-[{
+[
+  {
     "id": 1,
+    "firstName": "Jose",
+    "lastName": "Perez",
+    "email": "Fundamental@gmail.com",
+    "password": "NRAwPdY0-12",
+    "avatar": "empowering.png"
+  }, 
+  {
+    "id": 2,
     "firstName": "Davita",
     "lastName": "Newbold",
-    "password": "NRAwPdY0",
-    "category": "Fundamental",
-    "image": "empowering.png"
-  }, {
-    "id": 2,
-    "firstName": "Ilysa",
-    "lastName": "Barr",
-    "password": "fUUpkVZP",
-    "category": "User-centric",
-    "image": "switchable.png"
-  }, {
+    "email": "Fundamental_2@gmail.com",
+    "password": "NRAwPdY0463",
+    "avatar": "empowering.png"
+  }, 
+  {
     "id": 3,
-    "firstName": "Maggy",
-    "lastName": "Mance",
-    "password": "5J1ggTwtqGa",
-    "category": "Assimilated",
-    "image": "zerodefect.png"
-  }, {
-    "id": 4,
-    "firstName": "Aloysius",
-    "lastName": "Treadway",
-    "password": "65gLvoAzl",
-    "category": "Monitored",
-    "image": "public-key.png"
-  }, {
-    "id": 5,
-    "firstName": "Karla",
-    "lastName": "Oxtoby",
-    "password": "8ZqPFz",
-    "category": "object-oriented",
-    "image": "fully-configurable.png"
-  }]
+    "firstName": "Laura",
+    "lastName": "Diaz",
+    "email": "prueba3@gmail.com",
+    "password": "NRAwPdY0?102",
+    "avatar": "empowering.png"
+  }
+]

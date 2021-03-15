@@ -17,17 +17,28 @@
             <h1 class="register-page">Registrate</h1>
             <h4 class="register-page">¿Ya tenés cuenta?<a  class="ingresa" href="/usuarios/login"> Ingresá aqui</a></h4>
             <br>
-            <form class="form-register" action="/usuarios/register" method="POST">
+            <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
               <h3 class="register-page">Nombre</h3>
-              <input class="insert-register" type="text" name="nombre" required placeholder="Ingresá tu nombre"> 
+              <input 
+                class="insert-register" 
+                type="text" 
+                name="firstName" 
+                <%= locals.errors && errors.fullName ? 'is-invalid' : null %> 
+                value="<%= locals.oldData ? oldData.fullName : null %>">
               <h3 class="register-page">Apellido</h3>
-              <input class="insert-register" type="text" name="apellido" required placeholder="Ingresá tu apellido">
+              <% if (locals.errors && errors.fullName) { %>
+                <div class="text-danger">
+                    <%= errors.fullName.msg %> 
+                </div>
+            <% } %>
+              <input class="insert-register" type="text" name="lastName" required placeholder="Ingresá tu apellido">
               <h3 class="register-page">Email</h3>
-              <input class="insert-register" type="email" name="correo" required placeholder="Ingresá un mail valido">
+              <input class="insert-register" type="email" name="email" required placeholder="Ingresá un mail valido">
               <h3 class="register-page">Contraseña</h3>
               <input class="insert-register" type="password" name="Contraseña" required placeholder="Recordá que sea alfanumerica"> 
-              <h3 class="register-page">Repetir contraseña</h3>
-              <input class="insert-register" type="password" name="Confirma contraseña" required placeholder="Repetí tu contraseña">
+
+              <br>
+              <input type="file" name="avatar" required >
               <br>
               <br>
               <div class="boton-register">
