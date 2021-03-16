@@ -20,25 +20,64 @@
             <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
               <h3 class="register-page">Nombre</h3>
               <input 
-                class="insert-register" 
+                class="insert-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.firstName : null %>"
                 type="text" 
-                name="firstName" 
-                <%= locals.errors && errors.fullName ? 'is-invalid' : null %> 
-                value="<%= locals.oldData ? oldData.fullName : null %>">
+                name="firstName"
+              >
+                <% if (locals.errors && errors.firstName) { %>
+                  <div class="text-danger">
+                      <%= errors.firstName.msg %> 
+                  </div>
+              <% } %>
               <h3 class="register-page">Apellido</h3>
-              <% if (locals.errors && errors.fullName) { %>
+              <input 
+                class="insert-register <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.lastName : null %>"
+                type="text" 
+                name="lastName" 
+                
+              >
+              <% if (locals.errors && errors.lastName) { %>
                 <div class="text-danger">
-                    <%= errors.fullName.msg %> 
+                    <%= errors.lastName.msg %> 
                 </div>
             <% } %>
-              <input class="insert-register" type="text" name="lastName" required placeholder="Ingresá tu apellido">
               <h3 class="register-page">Email</h3>
-              <input class="insert-register" type="email" name="email" required placeholder="Ingresá un mail valido">
+              <input 
+                class="insert-register <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.email : null %>"
+                type="email" 
+                name="email" 
+              >  
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
               <h3 class="register-page">Contraseña</h3>
-              <input class="insert-register" type="password" name="Contraseña" required placeholder="Recordá que sea alfanumerica"> 
+              <input 
+                class="insert-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                type="password" 
+                name="password" 
+                
+              > 
+              <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                  <%= errors.password.msg %>
+                </div>
+              <% } %>
 
               <br>
-              <input type="file" name="avatar" required >
+              <input
+                class="insert-register <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                type="file" 
+                name="avatar"              >
+              <% if (locals.errors && errors.avatar) { %>
+                <div class="text-danger">
+                  <%= errors.avatar.msg %>
+                </div>
+              <% } %>
               <br>
               <br>
               <div class="boton-register">

@@ -7,9 +7,7 @@ const User = require('../models/User');
 
 const usuariosController ={
 
-    login:  (req, res) =>{
-        res.render('login');
-    },
+    
     register: (req, res) =>{
         res.render('register');
     },
@@ -47,7 +45,55 @@ const usuariosController ={
 
 		let userCreated = User.create(userToCreate);
 
-		return res.redirect('login');
-    }
+		return res.redirect('/usuarios/login');
+
+    },
+	login:  (req, res) =>{
+        res.render('login');
+    },
+	loginProcess: (req, res) => {
+		let userToLogin =  User.findByField('email', req.body.email);
+		
+		if(userToLogin) {
+			let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
+			if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: 1000*600 })
+				}
+
+				return res.redirect('/usuarios/profile');
+			} 
+			return res.render('login', {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
+
+		return res.render('login', {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+	},
+	
+	profile: (req, res) => {
+		return res.render('userProfile', {
+			user: req.session.userLogged
+		});
+	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 }
 module.exports=usuariosController;

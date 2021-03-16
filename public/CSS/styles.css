@@ -692,6 +692,22 @@ div.top-header-login{
 
  /* aqui conmienza el registro de usuario/*/
 
+
+.text-danger{
+    font-size: 15px;
+    margin-left: 10px;
+    color: #ff0000;
+}
+
+.form-check{
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.form-check-input{
+    margin: 5px;
+}
+
 div.register{
     background-color: #FFF;
 }
@@ -739,7 +755,7 @@ p.register-page{
 }
 .insert-register{
     width: 100%;
-    margin: 5px;
+    margin: 10px;
     background-color: lightgrey ;
     border: 1px solid lightgrey;
     align-content: center;

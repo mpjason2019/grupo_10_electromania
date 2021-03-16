@@ -32,12 +32,20 @@
             <div class="hamburger-buttom">
                 <i class="fas fa-bars"></i>
             </div>
+            
             <div class="sesion">
-                <a class="sesiona" href="/usuarios/register">Regístrate</a>
-                <a class="sesiona" href="#">|</a>
-                <a class="sesiona" href="/usuarios/login">Inicia Sesión</a>
-                <a href="./productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>
-            </div> 
+                <% if (locals.isLogged) { %>
+                    <a class="sesiona" href="/usuarios/profile">Hola <%=user.firstName%></a>
+                    <a class="sesiona" href="#">|</a>
+                    <a class="sesiona" href="/usuarios/logout">Logout</a>
+                    <a href="./productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>
+                 <% } else { %>  
+                    <a class="sesiona" href="/usuarios/register">Regístrate</a>
+                    <a class="sesiona" href="#">|</a>
+                    <a class="sesiona" href="/usuarios/login">Inicia Sesión</a> 
+                    <a href="./productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>                    
+                 <% } %>         
+           </div> 
          
     </div>    
     

@@ -1,26 +1,34 @@
 [
-  {
-    "id": 1,
-    "firstName": "Jose",
-    "lastName": "Perez",
-    "email": "Fundamental@gmail.com",
-    "password": "NRAwPdY0-12",
-    "avatar": "empowering.png"
-  }, 
-  {
-    "id": 2,
-    "firstName": "Davita",
-    "lastName": "Newbold",
-    "email": "Fundamental_2@gmail.com",
-    "password": "NRAwPdY0463",
-    "avatar": "empowering.png"
-  }, 
-  {
-    "id": 3,
-    "firstName": "Laura",
-    "lastName": "Diaz",
-    "email": "prueba3@gmail.com",
-    "password": "NRAwPdY0?102",
-    "avatar": "empowering.png"
-  }
+ {
+  "id": 1,
+  "firstName": "Jose",
+  "lastName": "Perez",
+  "email": "Fundamental@gmail.com",
+  "password": "NRAwPdY0-12",
+  "avatar": "empowering.png"
+ },
+ {
+  "id": 2,
+  "firstName": "Davita",
+  "lastName": "Newbold",
+  "email": "Fundamental_2@gmail.com",
+  "password": "NRAwPdY0463",
+  "avatar": "empowering.png"
+ },
+ {
+  "id": 3,
+  "firstName": "Laura",
+  "lastName": "Diaz",
+  "email": "prueba3@gmail.com",
+  "password": "NRAwPdY0?102",
+  "avatar": "empowering.png"
+ },
+ {
+  "id": 4,
+  "firstName": "Jeisson Rolando",
+  "lastName": "Peña",
+  "email": "jmedina@gmail.com",
+  "password": "$2a$10$KSkiDLAOWIo2MWzyqQIAi.q8OnRo3UlDOwfgCMpBtWjJZ15AtRIMC",
+  "avatar": "1615928300774_img.png"
+ }
 ]
