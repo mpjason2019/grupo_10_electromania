@@ -35,7 +35,7 @@
             
             <div class="sesion">
                 <% if (locals.isLogged) { %>
-                    <a class="sesiona" href="/usuarios/profile">Hola <%=user.firstName%></a>
+                    <a class="sesiona" href="/usuarios/profile">Hola <%= locals.userLogged.firstName %></a>
                     <a class="sesiona" href="#">|</a>
                     <a class="sesiona" href="/usuarios/logout">Logout</a>
                     <a href="./productos/productCart"><div class="car"><i class="fas fa-cart-arrow-down"></i></div></a>

@@ -690,6 +690,22 @@ div.top-header-login{
      text-align: center;
  }
 
+/*aqui comienza User Profile*/
+
+div.row{
+    width: 50%;
+    margin: 20px;
+}
+
+div.row img{
+    width: 50%;
+}
+
+div.alert {
+    font-weight: bold;
+}
+
+
  /* aqui conmienza el registro de usuario/*/
 
 
