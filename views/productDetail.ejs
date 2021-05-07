@@ -53,6 +53,17 @@
                 </div>
             </div>
         </section>
+        <section class="main-producto-spects">
+            <div class="main-article-spects">
+                <br>
+                <h3 class="pantalla">DETALLE</h3>
+                <div class="pantalla">
+                    <h4><%=produc.description%> </h4>
+                 
+                </div>
+               
+            </div>
+        </section> 
         <h2 class="titulo1">Personas interesadas en este producto también vieron</h2>
         <section class="ofertas-productosDetail">
             <% for (producto of inSale) { %> 
@@ -77,18 +88,7 @@
 
 
         </section>
-        <section class="main-producto-spects">
-            <div class="main-article-spects">
-                <br>
-                <h3 class="pantalla">DETALLE</h3>
-                <div class="pantalla">
-                    <h4><%=produc.description%> </h4>
-                 
-                </div>
-               
-            </div>
-        </section>    
-    </main>
+</main>
     <hr>    
     <%- include('partials/footer')  %> 
 </body>

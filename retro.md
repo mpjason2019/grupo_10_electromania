@@ -19,3 +19,8 @@ Sprint 4
 4-Mas manejo de Trello.
 5-Compromiso por parte de los nuevos integrantes en ponerse al dia para apoyar mas al equipo.
 
+Sprint 5
+
+1-Cosas a resaltar positivas, es que hicimos el sprint con tiempo y no dejamos cosas para ultima hora.
+2-Mejorar los analisis de retrospectiva, para poder mejorar con los entregables.
+3-Empezaremos a realizar reuniones cada 2 dias para ver los avances del proyecto. 
