@@ -4,6 +4,9 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 
 const productosController ={
 

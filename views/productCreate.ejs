@@ -26,25 +26,17 @@
         <div class="login-container">
           <div class="create-form">
               <form class="form-register" action="/productos/create" method="POST" enctype="multipart/form-data">
-                <h3 class="register-page">ID producto</h3>
-                <input class="insert-register" type="text" name="id" required placeholder="ID producto">
                 <h3 class="register-page">Nombre del producto</h3>
               <input class="insert-register" type="text" name="name" required placeholder="Nombre del producto"> 
               <h3 class="register-page">Precio</h3>
               <input class="insert-register" type="text" name="price" required placeholder="Precio">
+              <h3 class="register-page">Descuento</h3>
+              <input class="insert-register" type="text" name="descuento" required placeholder="Descuento">
               <h3 class="register-page">Descripcion</h3>
-              <div class="col-12">
+              <div class="col-12"></div>
                 <textarea name="description" id="description" class="form-input"></textarea>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h3 class="register-page">Categoria</h3>
-                    <select name="category" id="category" class="form-create">
-                        <option value="">Elegí</option>
-                        <option value="in-sale">En oferta</option>
-                        <option value="visited">Últimos agregados</option>
-                    </select>
-                </div> 
-                <div>
+                <h3 class="register-page">Stock</h3>
+                <input class="insert-register" type="text" name="stock" required placeholder="5 o 10">
                   <input class="file" type="file" name="image" required>
                 </div>
                <br>
