@@ -18,7 +18,7 @@ module.exports = function (sequelize, dataTypes){
         email: {
             type: dataTypes.STRING
         },
-        contraseña: {
+        password: {
             type: dataTypes.STRING
         },
         telefono: {
@@ -39,7 +39,7 @@ module.exports = function (sequelize, dataTypes){
         condigoPostal: {
             type: dataTypes.INTEGER
         },
-        celular: {
+        idPerfil: {
             type: dataTypes.INTEGER
         },
         provincia: {
@@ -59,11 +59,23 @@ module.exports = function (sequelize, dataTypes){
     let Cliente = sequelize.define(alias, cols, config);
 
     Cliente.associate = function(models){
-        Cliente.belongsToMany(models.Producto,{
-            as: "productos",
-            through: "compras",
-            foreignKey: "idCliente",
-            otherKey: "idProducto",
+        Cliente.belongsTo(models.Provincia,{
+            as: "provincias",
+            foreignKey: "idProvincia",
+            timestamps: false
+        })
+    },
+    Cliente.associate = function(models){
+        Cliente.belongsTo(models.localidad,{
+            as: "localidades",
+            foreignKey: "idLocalidad",
+            timestamps: false
+        })
+    },
+    Cliente.associate = function(models){
+        Cliente.belongsTo(models.Perfil,{
+            as: "perfiles",
+            foreignKey: "idPerfil",
             timestamps: false
         })
     }
