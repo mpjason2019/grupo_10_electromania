@@ -35,7 +35,7 @@ const productosController = {
         res.render('productCreate');
     },
 
-	store: (req, res) => {
+	store: async (req, res) => {
 		let image
 		
 		if(req.file != undefined){
@@ -45,15 +45,10 @@ const productosController = {
 			image = 'default-image.png'
 		}
 		
-		let ids = productos.map(p=>p.id)
-		let newProduct = {
-			id: Math.max(...ids)+1,
+		let producto = db.Producto.create({
 			...req.body,
 			image: image
-		};
-		// res.send(newProduct)
-		productos.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+		});
 		res.redirect('/');
 	},
 	// Update - Form to edit
