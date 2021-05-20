@@ -1,11 +1,11 @@
 const express = require('express');
 const productosController= require('../controllers/productosController.js')
 const router = express.Router();
-const path = require('path');
+// const path = require('path');
 const multer = require('multer');
-const fs = require('fs');
-const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const fs = require('fs');
+// const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
+// const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Multer
 const storage = multer.diskStorage({ 
@@ -29,7 +29,7 @@ router.post('/create', upload.single('image'), productosController.store);
 
 router.get('/:id/edit', productosController.edit);
 router.put('/:id', upload.single('image'), productosController.update);
-/*** DELETE ONE PRODUCT***/ 
+
 router.delete('/:id', productosController.destroy); 
 
 module.exports = router;

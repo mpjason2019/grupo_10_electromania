@@ -4,18 +4,18 @@
     <%- include('partials/navbar')  %>  
 
     <main>
-        <% let finalPrice=produc.discount ? (produc.price - produc.price * produc.discount / 100).toFixed(0) : produc.price;%>
+        <% let finalPrice=product.descuento ? (product.precio - product.precio * product.descuento / 100).toFixed(0) : product.precio;%>
         <section class="main-producto">
             <div class="main-article">
                 <div class="main-article-images">
-                    <img src="/images/products/<%= produc.image %>" alt="">
+                    <img src="/images/products/<%= product.rutaImagen %>" alt="">
                 </div>    
             </div>
             <div class="main-article-description">
                 <div class="description">
-                    <p class="descripcion1"><%= produc.name %></p>
+                    <p class="descripcion1"><%= product.nombre %></p>
                     <p class="descripcion1"><%= '$ '+toThousand(finalPrice) %></p>
-                    <p class="descripcion2"><%- produc.discount ? `<span>${produc.discount}% OFF</span>` : '' %> </p>
+                    <p class="descripcion2"><%- product.descuento ? `<span>${product.descuento}% OFF</span>` : '' %> </p>
                    
                 </div>
                 <div class="payment">
@@ -43,10 +43,10 @@
                 </div>
                 <div class="edit-delete">    
                     <div class="edit-b">
-                        <a href="/productos/<%= produc.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+                        <a href="/productos/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
                     </div>      
                     <diV class="delete-b">
-                        <form action="/productos/<%= produc.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <form action="/productos/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                             <button type="submit" class="action-button delete">ELIMINAR</button>
                         </form>
                     </diV> 
@@ -58,7 +58,7 @@
                 <br>
                 <h3 class="pantalla">DETALLE</h3>
                 <div class="pantalla">
-                    <h4><%=produc.description%> </h4>
+                    <h4><%=product.descripcion%> </h4>
                  
                 </div>
                
@@ -66,16 +66,16 @@
         </section> 
         <h2 class="titulo1">Personas interesadas en este producto también vieron</h2>
         <section class="ofertas-productosDetail">
-            <% for (producto of inSale) { %> 
-                <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : producto.price;%>
+            <% for (producto of productos) { %> 
+                <% let finalPrice=producto.descuento ? (producto.precio - producto.precio * producto.descuento / 100).toFixed(0) : producto.precio;%>
                     <section class="ofertas-productos">
                                 <article>
                                     <a href="/productos/productDetail/<%=producto.id%>">
                                         <img src="/images/products/<%= producto.image %>" alt="">
                                         <div class="productos2">
                                             <hr>
-                                            <p class="descripcion1"> <%= producto.name %> </p>
-                                            <p class="descripcion2"> <%- producto.discount ? `<span>${producto.discount}% OFF</span>` : '' %>  </p> 
+                                            <p class="descripcion1"> <%= producto.nombre %> </p>
+                                            <p class="descripcion2"> <%- producto.descuento ? `<span>${producto.descuento}% OFF</span>` : '' %>  </p> 
                                             <p class="precio">$<%= toThousand(finalPrice) %></p>
                                             <h4 class="descripcion3">Ahora 12</h4>
                                         </div>  

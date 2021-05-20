@@ -11,16 +11,16 @@
       
         <main class="producto">    
         
-            <% for (producto of inSale) { %> 
-            <% let finalPrice=producto.discount ? (producto.price - producto.price * producto.discount / 100).toFixed(0) : producto.price;%>
+            <% for (producto of productos) { %> 
+            <% let finalPrice=producto.descuento ? (producto.precio - producto.precio * producto.descuento / 100).toFixed(0) : producto.precio;%>
                 <section class="ofertas-productos">
                             <article>
                                 <a href="/productos/productDetail/<%=producto.id%>">
-                                    <img src="/images/products/<%= producto.image %>" alt="">
+                                    <img src="/images/products/<%= producto.rutaImagen %>" alt="">
                                     <div class="productos2">
                                         <hr>
-                                        <p class="descripcion1"> <%= producto.name %> </p>
-                                        <p class="descripcion2"> <%- producto.discount ? `<span>${producto.discount}% OFF</span>` : '' %>  </p> 
+                                        <p class="descripcion1"> <%= producto.nombre %> </p>
+                                        <p class="descripcion2"> <%- producto.descuento ? `<span>${producto.descuento}% OFF</span>` : '' %>  </p> 
                                         <p class="precio">$<%= toThousand(finalPrice) %></p>
                                         <h4 class="descripcion3">Ahora 12</h4>
                                     </div>  
