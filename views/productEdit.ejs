@@ -27,20 +27,18 @@
           <div class="create-form">
               <form class="form-register" action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <h3 class="register-page">Nombre del producto</h3>
-              <input class="insert-register" type="text" name="name" required placeholder="Nombre del producto" value="<%= productToEdit.name %>"> 
+              <input class="insert-register" type="text" name="name" required placeholder="Nombre del producto" value="<%= productToEdit.nombre %>"> 
               <h3 class="register-page">Precio</h3>
-              <input class="insert-register" type="text" name="price" required placeholder="Precio" value="<%= productToEdit.price %>">
+              <input class="insert-register" type="text" name="price" required placeholder="Precio" value="<%= productToEdit.precio %>">
+              <h3 class="register-page">Descuento</h3>
+              <input class="insert-register" type="text" name="price" required placeholder="Precio" value="<%= productToEdit.descuento %>">
+                            
               <h3 class="register-page">Descripcion</h3>
               <div class="col-12">
-                <textarea name="description" id="description" class="form-input"> <%= productToEdit.description%></textarea>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h3 class="register-page">Categoria</h3>
-                    <select name="category" id="category" class="form-create">
-                        <option value="in-sale" <%= productToEdit.category=='in-sale' ? 'selected' :''%>>En oferta</option>
-                        <option value="visited" <%= productToEdit.category=='visited' ? 'selected' :''%> >Últimos agregados</option>
-                    </select>
-                </div> 
+                <textarea name="description" id="description" class="form-input"> <%= productToEdit.descripcion%></textarea>
+              </div>
+              <h3 class="register-page">Stock</h3>
+              <input class="insert-register" type="text" name="stock" required value=<%= productToEdit.stock %>> 
                 <div>
                   <input class="file" type="file" name="image" required value="<%= productToEdit.image %>">
                 </div>

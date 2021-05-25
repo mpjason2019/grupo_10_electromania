@@ -3,54 +3,99 @@ const {
 	validationResult
 } = require('express-validator');
 
-const User = require('../models/User');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+// const User = require('../database/models');
 
 const usuariosController ={
 
-    
+    index: async (req, res) =>{
+		let clientes = await db.Cliente.findAll();
+		// res.send(productos);
+			res.render('clientesList',{clientes})
+        // const inSale = productos.filter(producto => producto.category== 'in-sale');
+        // res.render('productos',{inSale, toThousand});
+    },
+
+
     register: (req, res) =>{
         res.render('register');
     },
 
     processRegister: (req, res) => {
-		const resultValidation = validationResult(req);
-
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body,
-                
+	
+			
+			let usuario = db.Cliente.create({
+				nombre: req.body.nombre,
+				apellido: req.body.apellido,
+				email:req.body.email ,
+				password: req.body.password,
+				telefono:req.body.telefono ,
+				celular: req.body.celular,
+				domicilio: req.body.domicilio,
+				idProvincia: req.body.idProvincia,
+				idLocalidad: req.body.idLocalidad,
+				codigoPostal: req.body.codigoPostal,
+				idPerfil: req.body.idPerfil,
+				provincia:req.body.provincia,
+				localidad: req.body.localidad
+		
 			});
-		}
-
-		let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body,
-                
-			}); 
-		}
-
-		let userToCreate = {
-			...req.body,
-			password: bcryptjs.hashSync(req.body.password, 10),
-			avatar: req.file.filename
-		}
-
-		let userCreated = User.create(userToCreate);
-
-		return res.redirect('/usuarios/login');
+			res.redirect('/usuarios');
+		
 
     },
+
+	edit: async function(req,res) {
+        //buscas el cliente
+        let clienteToEdit = await db.Cliente.findByPk(req.params.id);
+		res.render('clienteToEdit',{clienteToEdit});
+
+	},
+	updateUser: (req, res) => {
+
+			db.Cliente.update({
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			email:req.body.email ,
+			password: req.body.password,
+			telefono:req.body.telefono ,
+			celular: req.body.celular,
+			domicilio: req.body.domicilio,
+			idProvincia: req.body.idProvincia,
+			idLocalidad: req.body.idLocalidad,
+			codigoPostal: req.body.codigoPostal,
+			idPerfil: req.body.idPerfil,
+			provincia:req.body.provincia,
+			localidad: req.body.localidad
+	
+		},{
+			where : {
+				id: req.params.id
+			}
+		});
+		
+		// res.redirect('/');
+
+		return res.redirect('/usuarios/');
+	
+	},
+	
+		 // Delete - Delete one client from DB
+	 destroy : (req, res) => {
+		db.Cliente.destroy({
+			where: {
+				id: req.params.id
+			}
+		});
+		res.redirect('/usuarios')
+	},
+
 	login:  (req, res) =>{
         res.render('login');
     },
+
 	loginProcess: (req, res) => {
 		let userToLogin =  User.findByField('email', req.body.email);
 		

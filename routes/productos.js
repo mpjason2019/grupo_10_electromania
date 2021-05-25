@@ -1,7 +1,7 @@
 const express = require('express');
 const productosController= require('../controllers/productosController.js')
 const router = express.Router();
-// const path = require('path');
+ const path = require('path');
 const multer = require('multer');
 // const fs = require('fs');
 // const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');

@@ -66,16 +66,16 @@
         </section> 
         <h2 class="titulo1">Personas interesadas en este producto también vieron</h2>
         <section class="ofertas-productosDetail">
-            <% for (producto of productos) { %> 
-                <% let finalPrice=producto.descuento ? (producto.precio - producto.precio * producto.descuento / 100).toFixed(0) : producto.precio;%>
+            <% for (productos of productos) { %> 
+                <% let finalPrice=productos.descuento ? (productos.precio - productos.precio * productos.descuento / 100).toFixed(0) : productos.precio;%>
                     <section class="ofertas-productos">
                                 <article>
-                                    <a href="/productos/productDetail/<%=producto.id%>">
-                                        <img src="/images/products/<%= producto.image %>" alt="">
+                                    <a href="/productos/productDetail/<%=productos.id%>">
+                                        <img src="/images/products/<%= productos.image %>" alt="">
                                         <div class="productos2">
                                             <hr>
-                                            <p class="descripcion1"> <%= producto.nombre %> </p>
-                                            <p class="descripcion2"> <%- producto.descuento ? `<span>${producto.descuento}% OFF</span>` : '' %>  </p> 
+                                            <p class="descripcion1"> <%= productos.nombre %> </p>
+                                            <p class="descripcion2"> <%- productos.descuento ? `<span>${productos.descuento}% OFF</span>` : '' %>  </p> 
                                             <p class="precio">$<%= toThousand(finalPrice) %></p>
                                             <h4 class="descripcion3">Ahora 12</h4>
                                         </div>  

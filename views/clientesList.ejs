@@ -1,0 +1,33 @@
+<%- include('partials/head')  %> 
+<body>
+ 
+        <%- include('partials/header')  %> 
+        <%- include('partials/navbar')  %> 
+<div class="contenedor-productos"> 
+        <div class="pre-main">
+        <h2 class="titulo-productos">Todos los Clientes</h2>
+        <a href="/usuarios/register" class="button-edit">CREAR CLIENTE</a>
+        </div>
+      
+        <main class="clientes">    
+                <section class="ofertas-productos">
+  
+                        <ul>
+                        <% for( let i = 0; i < clientes.length; i++ ) { %>
+                        <li>
+                                <a href="/usuarios/<%= clientes[i].id %>/edit"> <%= clientes[i].id %> <%= clientes[i].nombre %> <%= clientes[i].apellido %></a>
+                        </li>
+                        <% } %>
+                
+                        </ul>
+                </section>
+        
+
+        
+        </main>
+</div> 
+    <hr>    
+    <%- include('partials/footer')  %> </body>
+</body>
+
+</html> 

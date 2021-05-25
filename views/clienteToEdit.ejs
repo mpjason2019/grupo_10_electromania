@@ -14,47 +14,32 @@
     <div class="container">
         <div class="login-container">
           <div class="register">
-            <h1 class="register-page">Registrate</h1>
-            <h4 class="register-page">¿Ya tenés cuenta?<a  class="ingresa" href="/usuarios/login"> Ingresá aqui</a></h4>
-            <br>
-            <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
+            <h1 class="register-page">Edicion de clientes</h1>
+
+            <form class="form-register" action="/usuarios/<%= clienteToEdit.id %>/edit?_method=PUT"  method="POST" enctype="multipart/form-data">
               <h3 class="register-page">Nombre</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.firstName : null %>"
+                value="<%= clienteToEdit.nombre %>"
                 type="text" 
                 name="nombre"
               >
-                <% if (locals.errors && errors.firstName) { %>
-                  <div class="text-danger">
-                      <%= errors.firstName.msg %> 
-                  </div>
-              <% } %>
+                
               <h3 class="register-page">Apellido</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.lastName : null %>"
+                value="<%= clienteToEdit.apellido%>"
                 type="text" 
                 name="apellido" 
                 
               >
-              <% if (locals.errors && errors.lastName) { %>
-                <div class="text-danger">
-                    <%= errors.lastName.msg %> 
-                </div>
-            <% } %>
               <h3 class="register-page">Email</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                value="<%= locals.oldData ? oldData.email : null %>"
+                value="<%= clienteToEdit.email %>"
                 type="email" 
                 name="email" 
               >  
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                    <%= errors.email.msg %> 
-                </div>
-            <% } %>
               <h3 class="register-page">Contraseña</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
@@ -62,88 +47,83 @@
                 name="password" 
                 
               > 
-              <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
-                  <%= errors.password.msg %>
-                </div>
-              <% } %>
               <h3 class="register-page">Telefono</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.telefono %>"
                 type="tel" 
                 name="telefono" 
               >  
               <h3 class="register-page">Celular</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.celular %>"
                 type="tel" 
                 name="celular" 
               >  
               <h3 class="register-page">Domicilio</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.domicilio %>"
                 type="text" 
                 name="domicilio" 
               >
               <h3 class="register-page">ID Provincia</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.idProvincia %>"
                 type="number" 
                 name="idProvincia" 
               >
               <h3 class="register-page">ID Localidad</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.idLocalidad %>"
                 type="number" 
                 name="idLocalidad" 
               >
               <h3 class="register-page">Codigo Postal</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.codigoPostal %>"
                 type="number" 
                 name="codigoPostal" 
               >
               <h3 class="register-page">ID Perfil</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.idPerfil %>"
                 type="number" 
                 name="idPerfil" 
               >
               <h3 class="register-page">Provincia</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.provincia%>"
                 type="text" 
                 name="provincia" 
               > 
               <h3 class="register-page">Localidad</h3>
               <input 
                 class="insert-register"
+                value="<%= clienteToEdit.localidad %>"
                 type="text" 
                 name="localidad" 
               >      
               <br>
-              
-              <div class="boton-register">
-              <input class="boton-register" type="submit" class="submit" value="Crear cuenta">
-              </div>
-              <br>
-              <h3 class="register-page">O</h3>   
-              <br> 
-            </form>          
-            <section >
-                <div class="ctatrs">
-                    <div class="ctatrs2">
-                        <div class="cuentatrs">                        
-                            <a  href="#">Iniciar sesión con Facebook</a>                       
-                        </div>
-                    </div>
-                    <div class="ctatrs2">
-                        <div class="cuentatrs">                      
-                            <a  href="#">Iniciar sesión con Google</a>                        
-                        </div>
-                    </div>    
+              <input class="boton-update" type="submit" class="submit" value="Actualizar Cliente">
+            </form>    
+            <br>
+            <diV class="delete-c">
+              <form action="/usuarios/<%= clienteToEdit.id %>/edit?_method=DELETE" method="POST" style="display: inline-flex" class="deletec">
+                <div class="edit-delete">    
+          
+                  <button type="submit" class="action-button delete">ELIMINAR CLIENTE</button>
                 </div>
-            </section>
+            
+              </form>
+            </diV>       
+            
             <br>
            </div>
         </div>

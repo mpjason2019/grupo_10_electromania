@@ -36,7 +36,7 @@ module.exports = function (sequelize, dataTypes){
         idLocalidad: {
             type: dataTypes.INTEGER
         },
-        condigoPostal: {
+        codigoPostal: {
             type: dataTypes.INTEGER
         },
         idPerfil: {
@@ -58,27 +58,27 @@ module.exports = function (sequelize, dataTypes){
 
     let Cliente = sequelize.define(alias, cols, config);
 
-    Cliente.associate = function(models){
-        Cliente.belongsTo(models.Provincia,{
-            as: "provincias",
-            foreignKey: "idProvincia",
-            timestamps: false
-        })
-    },
-    Cliente.associate = function(models){
-        Cliente.belongsTo(models.localidad,{
-            as: "localidades",
-            foreignKey: "idLocalidad",
-            timestamps: false
-        })
-    },
-    Cliente.associate = function(models){
-        Cliente.belongsTo(models.Perfil,{
-            as: "perfiles",
-            foreignKey: "idPerfil",
-            timestamps: false
-        })
-    }
+    // Cliente.associate = function(models){
+    //     Cliente.belongsTo(models.Provincia,{
+    //         as: "provincias",
+    //         foreignKey: "idProvincia",
+    //         timestamps: false
+    //     })
+    // },
+    // Cliente.associate = function(models){
+    //     Cliente.belongsTo(models.localidad,{
+    //         as: "localidades",
+    //         foreignKey: "idLocalidad",
+    //         timestamps: false
+    //     })
+    // },
+    // Cliente.associate = function(models){
+    //     Cliente.belongsTo(models.Perfil,{
+    //         as: "perfiles",
+    //         foreignKey: "idPerfil",
+    //         timestamps: false
+    //     })
+    // }
 
     return Cliente;
 }

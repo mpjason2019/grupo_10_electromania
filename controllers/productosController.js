@@ -1,5 +1,5 @@
 // const { SSL_OP_NO_TLSv1_1 } = require('constants');
-// const path = require('path');
+ const path = require('path');
 // const fs = require('fs');
 // const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
 // const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -46,48 +46,53 @@ const productosController = {
 		}
 		
 		let producto = db.Producto.create({
-			...req.body,
-			image: image
+			nombre: req.body.name,
+			precio: req.body.price,
+			descripcion:req.body.descuento ,
+			descuento: req.body.description,
+			stock:req.body.stock,
+			rutaImange: req.file.filename
 		});
-		res.redirect('/');
+		res.redirect('/productos');
 	},
 	// Update - Form to edit
-	edit: (req, res) => {
-		let productToEdit = productos.find(product=>product.id==req.params.id)
-		res.render('productEdit',{productToEdit,toThousand})
-	},
+	edit: async function(req,res) {
+        //buscas el producto
+        let productToEdit = await db.Producto.findByPk(req.params.id);
+        // formateo el release_date para que se seleccione el select
+        //productToEdit.release_date = moment(productToEdit.release_date).format('YYYY-MM-DD')
+        // traigo los generos
+            
+        res.render('productEdit',{productToEdit,toThousand});
+    },
+
     update: (req, res) => {
-		let id = req.params.id;
-		let productToEdit = productos.find(product => product.id == id)
-		let image
-		if(req.file != undefined){
-			image = req.file.filename
-		} else {
-			image = productToEdit.image
-		}
 
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		};
-		
-		let newProducts = productos.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
+		productToEdit = db.Producto.update({
+			nombre: req.body.name,
+			precio: req.body.price,
+			descripcion:req.body.descuento ,
+			descuento: req.body.description,
+			stock:req.body.stock,
+			rutaImange: req.file.filename
+		},{
+			where : {
+				id: req.params.id
 			}
-			return product;
-		})
+		});
+		
+		res.redirect('/productos/productDetail/' + req.params.id);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/');
+	
 	},
     // Delete - Delete one product from DB
 	destroy : (req, res) => {
-		let id = req.params.id;
-		let finalProducts = productos.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect('/');
+		db.Producto.destroy({
+			where: {
+				id: req.params.id
+			}
+		});
+		res.redirect('/productos')
 	}
 }
 

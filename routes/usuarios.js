@@ -10,6 +10,8 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 
+//clientes
+router.get('/', usuariosController.index);   
 
 // Formulario de registro
 router.get('/register', guestMiddleware, usuariosController.register);
@@ -17,13 +19,21 @@ router.get('/register', guestMiddleware, usuariosController.register);
 // Procesar el registro
 router.post('/register', uploadFile.single('avatar'), validations, usuariosController.processRegister);
 
-// Formulario de login
+//Editar Cliente
+router.get('/:id/edit', usuariosController.edit);
+router.put('/:id/edit', usuariosController.updateUser);
+
+// router.post('/productCart', usuariosController.processRegister);
+
+router.delete('/:id/edit', usuariosController.destroy); 
+
+//Formulario de login
 router.get('/login',guestMiddleware,usuariosController.login);
 
 // Procesar el login
 router.post('/login', usuariosController.loginProcess);
 
-// Perfil de Usuario
+//Perfil de Usuario
 router.get('/profile/', authMiddleware, usuariosController.profile);
 
 // Logout
