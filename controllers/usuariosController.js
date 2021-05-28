@@ -34,10 +34,7 @@ const usuariosController ={
 				telefono:req.body.telefono ,
 				celular: req.body.celular,
 				domicilio: req.body.domicilio,
-				idProvincia: req.body.idProvincia,
-				idLocalidad: req.body.idLocalidad,
 				codigoPostal: req.body.codigoPostal,
-				idPerfil: req.body.idPerfil,
 				provincia:req.body.provincia,
 				localidad: req.body.localidad
 		
@@ -54,7 +51,8 @@ const usuariosController ={
 
 	},
 	updateUser: (req, res) => {
-
+		
+		
 			db.Cliente.update({
 			nombre: req.body.nombre,
 			apellido: req.body.apellido,
@@ -63,10 +61,7 @@ const usuariosController ={
 			telefono:req.body.telefono ,
 			celular: req.body.celular,
 			domicilio: req.body.domicilio,
-			idProvincia: req.body.idProvincia,
-			idLocalidad: req.body.idLocalidad,
 			codigoPostal: req.body.codigoPostal,
-			idPerfil: req.body.idPerfil,
 			provincia:req.body.provincia,
 			localidad: req.body.localidad
 	
@@ -74,11 +69,13 @@ const usuariosController ={
 			where : {
 				id: req.params.id
 			}
-		});
+		}).then(respuesta => {
+			return res.redirect('/usuarios');
+		}) ;
 		
 		// res.redirect('/');
 
-		return res.redirect('/usuarios/');
+		
 	
 	},
 	

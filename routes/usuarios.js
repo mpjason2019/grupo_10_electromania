@@ -21,7 +21,7 @@ router.post('/register', uploadFile.single('avatar'), validations, usuariosContr
 
 //Editar Cliente
 router.get('/:id/edit', usuariosController.edit);
-router.put('/:id/edit', usuariosController.updateUser);
+router.put('/:id/edit', validations, usuariosController.updateUser);
 
 // router.post('/productCart', usuariosController.processRegister);
 

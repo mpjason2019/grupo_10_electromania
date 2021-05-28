@@ -1,4 +1,7 @@
 -- Adminer 4.8.1 MySQL 5.7.24 dump
+DROP DATABASE IF EXISTS electromania;
+CREATE DATABASE electromania;
+USE electromania;
 
 SET NAMES utf8;
 SET time_zone = '+00:00';
@@ -15,33 +18,24 @@ CREATE TABLE `clientes` (
   `telefono` int(11) NOT NULL,
   `celular` int(11) DEFAULT NULL,
   `domicilio` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `idProvincia` int(11) NOT NULL,
-  `idLocalidad` int(11) NOT NULL,
   `codigoPostal` int(11) NOT NULL,
-  `idPerfil` int(11) NOT NULL,
   `provincia` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `localidad` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `codigoPostal` (`codigoPostal`),
-  KEY `idPerfil` (`idPerfil`),
-  KEY `clientess_ibfk_1_idx` (`idProvincia`),
-  KEY `clientess_ibfk_2_idx` (`idLocalidad`),
-  CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`idProvincia`) REFERENCES `provincias` (`id`),
-  CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`idPerfil`) REFERENCES `perfiles` (`id`),
-  CONSTRAINT `clientes_ibfk_3` FOREIGN KEY (`idLocalidad`) REFERENCES `localidades` (`id`)
+  KEY `codigoPostal` (`codigoPostal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `email`, `password`, `telefono`, `celular`, `domicilio`, `idProvincia`, `idLocalidad`, `codigoPostal`, `idPerfil`, `provincia`, `localidad`) VALUES
-(1,	'Cristian',	'Lopez',	'lopez@gmail.com',	'dfdasfdsfs474112544258',	112365856,	112365856,	'Mitre 1550',	1,	1,	1759,	2,	'Buenos Aires',	'Azul'),
-(2,	'Alonso',	'Real',	'real@gmail.com',	'dfdasdgfgd478112544258',	11596344,	11596344,	'La Valle 50',	5,	400,	1158,	2,	'Chaco',	'La Eduvigis'),
-(3,	'Lorena',	'Perez',	'perezlorena@gmail.com',	'killdsfs4747544258',	112563697,	112563697,	'Centenera 6589',	3,	301,	1569,	2,	'Capital Federal',	'Nueva Pompeya'),
-(4,	'Gloria',	'Palacios',	'gloriapa@gmail.com',	'244fdf47dsa5877yyuf',	115896699,	115896699,	'Av Mayo 3365',	3,	286,	1102,	2,	'Capital Federal',	'Belgrano'),
-(5,	'Carlos',	'Alvarez',	'alvarescarlos@hotmail.com',	'48856rety51uujh145',	115896354,	115896354,	'Venezuela 5263',	2,	207,	1736,	2,	'Buenos Aires-GBA',	'Lomas del Mirador'),
-(6,	'Gustavo',	'Biondi',	'biondigus@gmail.com',	'47tyuiol4588911485sww',	1125789632,	1125789632,	'Callao 1563',	3,	299,	1123,	2,	'Capital Federal',	'Monserrat'),
-(7,	'Hernan',	'Troisi',	'hertroi@gmail.com',	'adsdasw77411effd256765%&',	112368754,	112368754,	'Leon Gallo 1542',	9,	991,	1985,	2,	'Entre RÃ­os',	'Aldea Salto'),
-(8,	'Laura',	'Correa',	'lalicorrea@gmail.com',	'$%%&ffsd755as%458852',	1125479956,	1125479956,	'Avellaneda 852',	7,	879,	1963,	2,	'CÃ³rdoba',	'Villa de Pocho'),
-(9,	'Ivan',	'Vargas',	'ivovargas@gmail.com',	'/*565566fsd112asassas',	1158974523,	1158974523,	'Ensenada 5961',	4,	350,	1189,	2,	'Catamarca',	'Los Varela'),
-(10,	'Fraco',	'Estevez',	'estevezfrank@gmail.com',	'deertytt85877%&/%48',	1185963541,	1185963541,	'Almafuerte 2563',	8,	979,	1759,	2,	'Corrientes',	'YapeyÃº');
+(1,	'Cristian',	'Lopez',	'lopez@gmail.com',	'dfdasfdsfs474112544258',	112365856,	112365856,	'Mitre 1550',	1759,	'Buenos Aires',	'Azul'),
+(2,	'Alonso',	'Real',	'real@gmail.com',	'dfdasdgfgd478112544258',	11596344,	11596344,	'La Valle 50',1158,	'Chaco',	'La Eduvigis'),
+(3,	'Lorena',	'Perez',	'perezlorena@gmail.com',	'killdsfs4747544258',	112563697,	112563697,	'Centenera 6589',	1569,'Capital Federal',	'Nueva Pompeya'),
+(4,	'Gloria',	'Palacios',	'gloriapa@gmail.com',	'244fdf47dsa5877yyuf',	115896699,	115896699,	'Av Mayo 3365',		1102,'Capital Federal',	'Belgrano'),
+(5,	'Carlos',	'Alvarez',	'alvarescarlos@hotmail.com',	'48856rety51uujh145',	115896354,	115896354,	'Venezuela 5263',1736,'Buenos Aires-GBA',	'Lomas del Mirador'),
+(6,	'Gustavo',	'Biondi',	'biondigus@gmail.com',	'47tyuiol4588911485sww',	1125789632,	1125789632,	'Callao 1563',	1123,'Capital Federal',	'Monserrat'),
+(7,	'Hernan',	'Troisi',	'hertroi@gmail.com',	'adsdasw77411effd256765%&',	112368754,	112368754,	'Leon Gallo 1542',	1985,'Entre RÃ­os',	'Aldea Salto'),
+(8,	'Laura',	'Correa',	'lalicorrea@gmail.com',	'$%%&ffsd755as%458852',	1125479956,	1125479956,	'Avellaneda 852',	1963,'CÃ³rdoba',	'Villa de Pocho'),
+(9,	'Ivan',	'Vargas',	'ivovargas@gmail.com',	'/*565566fsd112asassas',	1158974523,	1158974523,	'Ensenada 5961',1189,'Catamarca',	'Los Varela'),
+(10,	'Fraco',	'Estevez',	'estevezfrank@gmail.com',	'deertytt85877%&/%48',	1185963541,	1185963541,	'Almafuerte 2563',1759,'Corrientes',	'YapeyÃº');
 
 SET NAMES utf8mb4;
 

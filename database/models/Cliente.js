@@ -30,16 +30,7 @@ module.exports = function (sequelize, dataTypes){
         domicilio: {
             type: dataTypes.STRING
         },
-        idProvincia: {
-            type: dataTypes.INTEGER
-        },
-        idLocalidad: {
-            type: dataTypes.INTEGER
-        },
         codigoPostal: {
-            type: dataTypes.INTEGER
-        },
-        idPerfil: {
             type: dataTypes.INTEGER
         },
         provincia: {

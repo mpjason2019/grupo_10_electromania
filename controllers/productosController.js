@@ -48,8 +48,8 @@ const productosController = {
 		let producto = db.Producto.create({
 			nombre: req.body.name,
 			precio: req.body.price,
-			descripcion:req.body.descuento ,
-			descuento: req.body.description,
+			descripcion:req.body.description ,
+			descuento: req.body.descuento,
 			stock:req.body.stock,
 			rutaImange: req.file.filename
 		});
@@ -71,8 +71,8 @@ const productosController = {
 		productToEdit = db.Producto.update({
 			nombre: req.body.name,
 			precio: req.body.price,
-			descripcion:req.body.descuento ,
-			descuento: req.body.description,
+			descripcion:req.body.description ,
+			descuento: req.body.descuento,
 			stock:req.body.stock,
 			rutaImange: req.file.filename
 		},{

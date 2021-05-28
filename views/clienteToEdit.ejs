@@ -16,7 +16,7 @@
           <div class="register">
             <h1 class="register-page">Edicion de clientes</h1>
 
-            <form class="form-register" action="/usuarios/<%= clienteToEdit.id %>/edit?_method=PUT"  method="POST" enctype="multipart/form-data">
+            <form class="form-register" action="/usuarios/<%= clienteToEdit.id %>/edit?_method=PUT"  method="POST" >
               <h3 class="register-page">Nombre</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
@@ -68,33 +68,12 @@
                 type="text" 
                 name="domicilio" 
               >
-              <h3 class="register-page">ID Provincia</h3>
-              <input 
-                class="insert-register"
-                value="<%= clienteToEdit.idProvincia %>"
-                type="number" 
-                name="idProvincia" 
-              >
-              <h3 class="register-page">ID Localidad</h3>
-              <input 
-                class="insert-register"
-                value="<%= clienteToEdit.idLocalidad %>"
-                type="number" 
-                name="idLocalidad" 
-              >
               <h3 class="register-page">Codigo Postal</h3>
               <input 
                 class="insert-register"
                 value="<%= clienteToEdit.codigoPostal %>"
                 type="number" 
                 name="codigoPostal" 
-              >
-              <h3 class="register-page">ID Perfil</h3>
-              <input 
-                class="insert-register"
-                value="<%= clienteToEdit.idPerfil %>"
-                type="number" 
-                name="idPerfil" 
               >
               <h3 class="register-page">Provincia</h3>
               <input 
