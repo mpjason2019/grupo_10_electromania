@@ -37,7 +37,7 @@ const productosController = {
 
 	store: async (req, res) => {
 		let image
-		
+		return res.send(req.file)
 		if(req.file != undefined){
 			image = req.file.filename
             console.log(req.file.filename);
@@ -51,7 +51,7 @@ const productosController = {
 			descripcion:req.body.description ,
 			descuento: req.body.descuento,
 			stock:req.body.stock,
-			rutaImange: req.file.filename
+			rutaImange: image
 		});
 		res.redirect('/productos');
 	},
