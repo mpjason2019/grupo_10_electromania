@@ -37,7 +37,7 @@ const productosController = {
 
 	store: async (req, res) => {
 		let image
-		return res.send(req.file)
+		//return res.send(req.file)
 		if(req.file != undefined){
 			image = req.file.filename
             console.log(req.file.filename);
