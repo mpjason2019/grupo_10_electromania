@@ -6,6 +6,10 @@
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const {
+	validationResult
+} = require('express-validator');
+const { response } = require('express');
 
 
 const productosController = {
@@ -35,25 +39,46 @@ const productosController = {
         res.render('productCreate');
     },
 
-	store: async (req, res) => {
-		let image
-		return res.send(req.file)
+	store: (req, res) => {
+		
+
+		let errors = validationResult(req);
+		if (errors.isEmpty()){
+		let image 
+		// return res.send(req.file)
 		if(req.file != undefined){
 			image = req.file.filename
             console.log(req.file.filename);
 		} else {
-			image = 'default-image.png'
+			image = 'default-image.jpg'
 		}
-		
-		let producto = db.Producto.create({
+		let producto =  db.Producto.create({
 			nombre: req.body.name,
 			precio: req.body.price,
 			descripcion:req.body.description ,
 			descuento: req.body.descuento,
-			stock:req.body.stock,
-			rutaImange: image
-		});
-		res.redirect('/productos');
+			stock:parseInt(req.body.stock),
+			rutaImagen: image
+			
+		}).then(response => {
+			return res.redirect('/productos');
+
+
+		}) 
+		.catch(errors =>console.log(errors()))
+			
+		
+		
+
+		
+		
+	}else{
+			//return res.send(errors.array())  
+	
+			res.render("productCreate",{errors:errors.array()})
+		
+		}
+
 	},
 	// Update - Form to edit
 	edit: async function(req,res) {
@@ -67,21 +92,32 @@ const productosController = {
     },
 
     update: (req, res) => {
-
+		// return res.send(req.body)
+		let image 
+		// return res.send(req.file)
+		if(req.file != undefined){
+			image = req.file.filename
+            console.log(req.file.filename);
+		} else {
+			image = 'default-image.jpg'
+		}
 		productToEdit = db.Producto.update({
 			nombre: req.body.name,
 			precio: req.body.price,
 			descripcion:req.body.description ,
 			descuento: req.body.descuento,
 			stock:req.body.stock,
-			rutaImange: req.file.filename
+			rutaImagen: image
 		},{
 			where : {
 				id: req.params.id
 			}
-		});
+		}).then(response => {
+
+			res.redirect('/productos/productDetail/' + req.params.id);
+		}).catch(errors =>console.log(errors));
 		
-		res.redirect('/productos/productDetail/' + req.params.id);
+		
 
 	
 	},

@@ -25,19 +25,38 @@
     <div class="container">
         <div class="login-container">
           <div class="create-form">
-              <form class="form-register" action="/productos/create" method="POST" enctype="multipart/form-data">
+              <form id="form" class="form-register" action="/productos/create" method="POST" enctype="multipart/form-data">
+                <% if (locals.errors && errors.length > 0 ) { %>
+                  <% errors.forEach(error=>{%><p> <%=error.msg%> </p><%})%> 
+                  <% } %>
+                  <ul class= "errores"></ul> 
                 <h3 class="register-page">Nombre del producto</h3>
-              <input class="insert-register" type="text" name="name" required placeholder="Nombre del producto"> 
+              <input class="insert-register" type="text" name="name" id="nombre"  placeholder="Nombre del producto"> 
+              <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                    <%= errors.name.msg %> 
+                </div>
+            <% } %>
               <h3 class="register-page">Precio</h3>
-              <input class="insert-register" type="text" name="price" required placeholder="Precio">
+              <input class="insert-register" type="text" name="price"  placeholder="Precio">
               <h3 class="register-page">Descuento</h3>
-              <input class="insert-register" type="text" name="descuento" required placeholder="Descuento">
+              <input class="insert-register" type="text" name="descuento"  placeholder="Descuento">
               <h3 class="register-page">Descripcion</h3>
               <div class="col-12"></div>
                 <textarea name="description" id="description" class="form-input"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                  <div class="text-danger">
+                      <%= errors.description.msg %> 
+                  </div>
+              <% } %>
                 <h3 class="register-page">Stock</h3>
-                <input class="insert-register" type="text" name="stock" required placeholder="5 o 10">
-                  <input class="file" type="file" name="image" required>
+                <input class="insert-register" type="text" name="stock"  placeholder="5 o 10">
+                  <input class="file" type="file" name="image" id="imagen" accept=".png,.jpg,.gif" >
+                  <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                        <%= errors.image.msg %> 
+                    </div>
+                <% } %>
                 </div>
                <br>
               <div class="boton-register">
@@ -49,5 +68,6 @@
            </div>
         </div>
     </div>   
+    <script src = "/js/validacionesCreacionProducto.js"></script> 
 </body>
 </html>

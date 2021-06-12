@@ -4,7 +4,9 @@ const {
 } = require('express-validator');
 
 const db = require('../database/models');
-const sequelize = db.sequelize;
+const sequelize = db.Sequelize;
+const Op = sequelize.Op
+
 
 // const User = require('../database/models');
 
@@ -23,23 +25,34 @@ const usuariosController ={
         res.render('register');
     },
 
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
+		
+		let errors = validationResult(req);
+		//return res.send(errors)
+		if (errors.isEmpty())
+		{let usuario = await db.Cliente.create({
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			email:req.body.email ,
+			password: req.body.password,
+			telefono:req.body.telefono ,
+			celular: req.body.celular,
+			domicilio: req.body.domicilio,
+			codigoPostal: req.body.codigoPostal,
+			provincia:req.body.provincia,
+			localidad: req.body.localidad
+
+		 })
+			return res.redirect('/usuarios/profile');
+		
+	}else{
+		//return res.send(errors.array())  
+		res.render("register",{errors:errors.array()})
+	}
 	
 			
-			let usuario = db.Cliente.create({
-				nombre: req.body.nombre,
-				apellido: req.body.apellido,
-				email:req.body.email ,
-				password: req.body.password,
-				telefono:req.body.telefono ,
-				celular: req.body.celular,
-				domicilio: req.body.domicilio,
-				codigoPostal: req.body.codigoPostal,
-				provincia:req.body.provincia,
-				localidad: req.body.localidad
+			
 		
-			});
-			res.redirect('/usuarios');
 		
 
     },
@@ -93,38 +106,45 @@ const usuariosController ={
         res.render('login');
     },
 
-	loginProcess: (req, res) => {
-		let userToLogin =  User.findByField('email', req.body.email);
-		
-		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
+	loginProcess: async (req, res) => {
+        let userToLogin = await db.Cliente.findOne({
+            where: {
+                email: { [Op.like]: req.body.email }
+            }
+        })
+        if (userToLogin) {
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
 
-				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000*60)*60 })
-				}
+                // res.send(userToLogin)
+                if (req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, { maxAge: 5 * 60 * 1000 }); //probamos otra opcion 'email'
+                }
 
-				return res.redirect('/usuarios/profile');
-			} 
-			return res.render('login', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					}
-				}
-			});
-		}
+                return res.redirect('profile');
+            } 
+			else {//si no coincide la contraseña se renderiza la vista de login con error
+                res.render("login", {
+                   old: req.body, errors: {
+                        email: {
+                            msg: "Las credenciales son invalidas"
+                        }
+                    }
+                })
+            }
 
-		return res.render('login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
-	},
+        } else { //si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
+            res.render("./usuarios/login", {
+                titulo: "Ingresá", errors: {
+                    email: {
+                        msg: "El usuario no se encuentra en la base de datos"
+                    }
+                }
+            })
+        }
+    },
 	
 	profile: (req, res) => {
 		return res.render('userProfile', {user: req.session.userLogged});

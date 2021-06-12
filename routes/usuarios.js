@@ -8,6 +8,8 @@ const uploadFile = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const validationLogin = require('../middlewares/validacionregistrologin');
+const validacionregistrologin = require('../middlewares/validacionregistrologin');
 
 
 //clientes
@@ -31,7 +33,7 @@ router.delete('/:id/edit', usuariosController.destroy);
 router.get('/login',guestMiddleware,usuariosController.login);
 
 // Procesar el login
-router.post('/login', usuariosController.loginProcess);
+router.post('/login',validacionregistrologin, usuariosController.loginProcess);
 
 //Perfil de Usuario
 router.get('/profile/', authMiddleware, usuariosController.profile);

@@ -17,9 +17,17 @@
             <h1 class="register-page">Registrate</h1>
             <h4 class="register-page">¿Ya tenés cuenta?<a  class="ingresa" href="/usuarios/login"> Ingresá aqui</a></h4>
             <br>
+            <% if (locals.errors && errors.length > 0 ) { %>
+            <% errors.forEach(error=>{%><p> <%=error.msg%> </p><%})%> 
+            <% } %>
             <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
+              <ul class= "errores"></ul> 
+              
               <h3 class="register-page">Nombre</h3>
+             
               <input 
+
+                id="nombre"
                 class="insert-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.firstName : null %>"
                 type="text" 
@@ -32,6 +40,7 @@
               <% } %>
               <h3 class="register-page">Apellido</h3>
               <input 
+                id="apellido"
                 class="insert-register <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.lastName : null %>"
                 type="text" 
@@ -45,6 +54,8 @@
             <% } %>
               <h3 class="register-page">Email</h3>
               <input 
+
+                 id="email"
                 class="insert-register <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                 value="<%= locals.oldData ? oldData.email : null %>"
                 type="email" 
@@ -57,6 +68,7 @@
             <% } %>
               <h3 class="register-page">Contraseña</h3>
               <input 
+              id="password"
                 class="insert-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                 type="password" 
                 name="password" 
@@ -69,40 +81,65 @@
               <% } %>
               <h3 class="register-page">Telefono</h3>
               <input 
+              id="telefono"
                 class="insert-register"
                 type="tel" 
                 name="telefono" 
+               
               >  
               <h3 class="register-page">Celular</h3>
               <input 
+              id="celular"
                 class="insert-register"
                 type="tel" 
                 name="celular" 
+                
               >  
               <h3 class="register-page">Domicilio</h3>
               <input 
                 class="insert-register"
                 type="text" 
                 name="domicilio" 
+                
               >
               <h3 class="register-page">Codigo Postal</h3>
               <input 
                 class="insert-register"
                 type="number" 
                 name="codigoPostal" 
+                
               >
               <h3 class="register-page">Provincia</h3>
               <input 
                 class="insert-register"
                 type="text" 
                 name="provincia" 
+                
               > 
               <h3 class="register-page">Localidad</h3>
               <input 
                 class="insert-register"
                 type="text" 
-                name="localidad" 
-              >      
+                name="localidad"
+                
+              
+              
+                >    
+                
+                <h3 class="register-page">Avatar</h3>
+              <input 
+                class="insert-register"
+                type="file" 
+                name="avatar" 
+                id="avatar"
+                
+              
+              
+                >      <% if (locals.errors && errors.avatar) { %>
+                  <div class="text-danger">
+                    <%= errors.avatar.msg %>
+                  </div>
+                <% } %>
               <br>
               
               <div class="boton-register">
@@ -131,5 +168,6 @@
         </div>
     </div> 
     <%- include('partials/footer')  %>   
+    <script src = "/js/validaciones.js"></script> 
 </body>
 </html>

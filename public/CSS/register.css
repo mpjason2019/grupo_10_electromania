@@ -101,4 +101,21 @@
 
   }
 
+ .is-valid {
+    background-color: red;
+    opacity: 1;
+  }
+
+  .is-invalid{
+    
+      background-color: pink;
+    
+  }
+
+  .alert-warning{
+    color: #D8000C;
+    background-color: #FFBABA;
+    
+  }
+
   
