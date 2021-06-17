@@ -6,7 +6,9 @@
 <div class="contenedor-productos"> 
         <div class="pre-main">
         <h2 class="titulo-productos">Todos los productos</h2>
+        <% if (locals.isLogged && locals.userLogged.idPerfil==1) { %>
         <a href="/productos/create" class="button-edit">CREAR PRODUCTO</a>
+        <% } %>
         </div>
       
         <main class="producto">    

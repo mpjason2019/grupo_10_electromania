@@ -4,6 +4,11 @@
     padding:0;
 }
 
+.foto403{
+
+   margin-left: 100px;
+ }
+
 html, body{
     height: 100vh;
     background-color: #ECEAEB ;
@@ -18,6 +23,7 @@ body{
 ul.errores.alert-warning{
     color:red;
     opacity: 1;
+    background-color: #ffd3d3;
 }
 
 hr{
@@ -707,7 +713,7 @@ div.row{
 }
 
 div.row img{
-    width: 50%;
+    width: 100px;
 }
 
 div.alert {
@@ -1877,4 +1883,7 @@ margin-top: 17px;
          margin-left: 20px;
          margin-right: 20px;
      }   
+
+
+     
 }

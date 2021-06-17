@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 app.use('/',rutaMain);
 app.use('/productos',rutaProductos);
-app.use('/usuarios',rutaUsuarios);
+app.use('/usuarios', rutaUsuarios);
 
 
 

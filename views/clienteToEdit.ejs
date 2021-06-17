@@ -17,6 +17,17 @@
             <h1 class="register-page">Edicion de clientes</h1>
 
             <form class="form-register" action="/usuarios/<%= clienteToEdit.id %>/edit?_method=PUT"  method="POST" >
+              
+              <h3 class="register-page">Es admin?</h3>
+              <select name="idPerfil">
+<option value="1" <%= clienteToEdit.idPerfil == 1?"selected":"" %>>Administrador</option>
+<option value="2" <%= clienteToEdit.idPerfil == 2?"selected":"" %>>Usuario</option>
+
+              </select>
+              
+              
+              
+              
               <h3 class="register-page">Nombre</h3>
               <input 
                 class="insert-register <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
@@ -45,6 +56,7 @@
                 class="insert-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                 type="password" 
                 name="password" 
+                value="<%= clienteToEdit.password %>"
                 
               > 
               <h3 class="register-page">Telefono</h3>

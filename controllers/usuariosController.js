@@ -34,13 +34,14 @@ const usuariosController ={
 			nombre: req.body.nombre,
 			apellido: req.body.apellido,
 			email:req.body.email ,
-			password: req.body.password,
+			password: bcryptjs.hashSync(req.body.password, 12),
 			telefono:req.body.telefono ,
 			celular: req.body.celular,
 			domicilio: req.body.domicilio,
 			codigoPostal: req.body.codigoPostal,
 			provincia:req.body.provincia,
-			localidad: req.body.localidad
+			localidad: req.body.localidad,
+			idPerfil: 2
 
 		 })
 			return res.redirect('/usuarios/profile');
@@ -70,13 +71,14 @@ const usuariosController ={
 			nombre: req.body.nombre,
 			apellido: req.body.apellido,
 			email:req.body.email ,
-			password: req.body.password,
+			password: bcryptjs.hashSync(req.body.password, 12),
 			telefono:req.body.telefono ,
 			celular: req.body.celular,
 			domicilio: req.body.domicilio,
 			codigoPostal: req.body.codigoPostal,
 			provincia:req.body.provincia,
-			localidad: req.body.localidad
+			localidad: req.body.localidad,
+			idPerfil: req.body.idPerfil
 	
 		},{
 			where : {
@@ -107,11 +109,15 @@ const usuariosController ={
     },
 
 	loginProcess: async (req, res) => {
-        let userToLogin = await db.Cliente.findOne({
+        // return res.send(req.body.email)
+		
+		
+		let userToLogin = await db.Cliente.findOne({
             where: {
                 email: { [Op.like]: req.body.email }
             }
-        })
+        });
+		// return res.send(userToLogin)
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
@@ -136,7 +142,7 @@ const usuariosController ={
             }
 
         } else { //si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
-            res.render("./usuarios/login", {
+            res.render("login", {
                 titulo: "Ingresá", errors: {
                     email: {
                         msg: "El usuario no se encuentra en la base de datos"
@@ -154,6 +160,11 @@ const usuariosController ={
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+
+	error403: (req,res) =>{
+res.render('403')
+
+	} 
 }
 module.exports=usuariosController;

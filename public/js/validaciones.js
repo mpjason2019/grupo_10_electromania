@@ -28,6 +28,10 @@ window.onload = function(){
         nombre.classList.add("is-invalid")
 
         } 
+        else if(nombre.value.length < 2) {
+          
+            errores.push("El campo debe tener al menos 2 caracteres")
+            nombre.classList.add("is-invalid")}
         
             
      else {
@@ -41,9 +45,16 @@ window.onload = function(){
 
             errores.push("El campo apellido esta vacío")
             apellido.classList.add("is-invalid")
+
     
     
-            } else {
+            }  else if(apellido.value.length < 2) {
+          
+                errores.push("El campo debe tener al menos 2 caracteres")
+                nombre.classList.add("is-invalid")}
+            
+            
+            else {
                 apellido.classList.add("is-valid");
                 apellido.classList.remove("is-invalid");
                 formulario.apellido.focus();
@@ -64,6 +75,10 @@ window.onload = function(){
                 errores.push("El campo password esta vacío")
                 nombre.classList.add("is-invalid")    
           } 
+          else if(password.value.length < 8) {
+          
+            errores.push("La contraseña debe tener al menos 8 caracteres")
+            nombre.classList.add("is-invalid")}
             else {
                     password.classList.add("is-valid");
                     password.classList.remove("is-invalid");

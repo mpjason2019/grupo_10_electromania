@@ -38,7 +38,11 @@ module.exports = function (sequelize, dataTypes){
         },
         localidad: {
             type: dataTypes.STRING
+        },
+        idPerfil:{
+            type:dataTypes.INTEGER
         }
+        
 
     };
 

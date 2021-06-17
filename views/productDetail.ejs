@@ -38,9 +38,10 @@
                 </div>
                 <div class="paymentbtn">
                     <div class="paybt">
-                        <a href="#" class="action-button edit">Comprar</a>
+                        <a href="/productos/productCart" class="action-button edit">Comprar</a>
                     </div>
                 </div>
+                <% if (locals.isLogged && locals.userLogged.idPerfil==1) { %>
                 <div class="edit-delete">    
                     <div class="edit-b">
                         <a href="/productos/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
@@ -51,6 +52,7 @@
                         </form>
                     </diV> 
                 </div>
+                <% } %>
             </div>
         </section>
         <section class="main-producto-spects">
